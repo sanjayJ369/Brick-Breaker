@@ -1,0 +1,14 @@
+{
+	"semi_wood1":{
+		"scene":"res://scenes/bricks/squares/semi_wood/semi_wood1.tscn"
+	},
+	"rock1":{
+		"scene":"res://scenes/bricks/squares/rocks/rock1.tscn"
+	},
+	"gold1":{
+		"scene":"res://scenes/bricks/squares/gold/gold1.tscn"
+	},
+	"wood1":{
+		"scene":"res://scenes/bricks/squares/wood/wood1.tscn"
+	}
+}

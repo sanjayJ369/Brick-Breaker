@@ -1,0 +1,134 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://scenes/wall.gd" type="Script" id=1]
+[ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tiles/new_tiles.tres" type="TileSet" id=3]
+[ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
+[ext_resource path="res://scenes/bricks/triangles/gold/gold_tr.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/bricks/triangles/wood/wood_bl.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/bricks/triangles/semi_wood/semi_wood_tl.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/bricks/triangles/rock/rock_tl.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
+[ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
+[ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/bricks/triangles/rock/rock_tr.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/bricks/triangles/gold/gold_bl.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/bricks/triangles/gold/gold_br.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/bricks/triangles/gold/gold_tl.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/bricks/triangles/wood/wood_tr.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/bricks/triangles/wood/wood_br.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/bricks/triangles/wood/wood_tl.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/bricks/triangles/semi_wood/semi_wood_bl.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/bricks/triangles/rock/rock_bl.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/bricks/triangles/semi_wood/semi_wood_br.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/bricks/triangles/semi_wood/semi_wood_tr.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/bricks/triangles/rock/rock_br.tscn" type="PackedScene" id=24]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 4 )
+
+[node name="control" type="Node2D"]
+script = ExtResource( 1 )
+balls = 270
+delay = 0.1
+vel_max = 500
+max_bounces = 45
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+
+[node name="shoot_delay" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="TileMap" type="TileMap" parent="."]
+mode = 2
+tile_set = ExtResource( 3 )
+format = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="ball" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 720.0
+margin_right = 104.0
+margin_bottom = 789.0
+custom_fonts/font = SubResource( 1 )
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aimer" parent="." instance=ExtResource( 12 )]
+position = Vector2( -64, 464 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 494, 713 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 10 )
+offset = Vector2( -2.5, -0.5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 480, 704 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+
+[node name="bricks" type="Node2D" parent="."]
+position = Vector2( 0, 8 )
+
+[node name="wood_bl" parent="bricks" instance=ExtResource( 7 )]
+position = Vector2( 152, 713 )
+
+[node name="wood_tl" parent="bricks" instance=ExtResource( 19 )]
+position = Vector2( 152, 88 )
+
+[node name="wood_tr" parent="bricks" instance=ExtResource( 17 )]
+position = Vector2( 872, 88 )
+
+[node name="wood_br" parent="bricks" instance=ExtResource( 18 )]
+position = Vector2( 872, 544 )
+
+[node name="semi_wood_bl" parent="bricks" instance=ExtResource( 20 )]
+position = Vector2( 216, 544 )
+
+[node name="semi_wood_br" parent="bricks" instance=ExtResource( 22 )]
+position = Vector2( 808, 480 )
+
+[node name="semi_wood_tl" parent="bricks" instance=ExtResource( 8 )]
+position = Vector2( 216, 144 )
+
+[node name="semi_wood_tr" parent="bricks" instance=ExtResource( 23 )]
+position = Vector2( 808, 144 )
+
+[node name="rock_bl" parent="bricks" instance=ExtResource( 21 )]
+position = Vector2( 280, 480 )
+
+[node name="rock_br" parent="bricks" instance=ExtResource( 24 )]
+position = Vector2( 752, 416 )
+
+[node name="rock_tl" parent="bricks" instance=ExtResource( 9 )]
+position = Vector2( 280, 208 )
+
+[node name="rock_tr" parent="bricks" instance=ExtResource( 13 )]
+position = Vector2( 744, 208 )
+
+[node name="gold_bl" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 344, 416 )
+
+[node name="gold_br" parent="bricks" instance=ExtResource( 15 )]
+position = Vector2( 680, 352 )
+
+[node name="gold_tl" parent="bricks" instance=ExtResource( 16 )]
+position = Vector2( 344, 272 )
+
+[node name="gold_tr" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 680, 272 )
+
+[node name="aim" type="Node2D" parent="."]
+
+[editable path="StaticBody2D"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tiles/complete_tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
+
+[node name="background1" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 48, 8 )
+format = 1
+tile_data = PoolIntArray( 0, 119, 0, 1, 119, 0, 2, 119, 0, 3, 119, 0, 4, 119, 0, 5, 119, 0, 6, 119, 0, 7, 119, 0, 8, 119, 0, 9, 119, 0, 10, 119, 0, 3080192, 119, 0, 3080193, 119, 0, 3080194, 119, 0, 3080195, 119, 0, 3080196, 119, 0, 3080197, 119, 0, 3080198, 119, 0, 3080199, 119, 0, 3080200, 119, 0, 3080201, 119, 0, 3080202, 119, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+scale = Vector2( 2, 2 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 48 )
+format = 1
+tile_data = PoolIntArray( 0, 121, 0, 63, 120, 0, 65536, 121, 0, 65599, 120, 0, 131072, 121, 0, 131135, 120, 0, 196608, 121, 0, 196671, 120, 0, 262144, 121, 0, 262207, 120, 0, 327680, 121, 0, 327743, 120, 0, 393216, 121, 0, 393279, 120, 0, 458752, 121, 0, 458815, 120, 0, 3080192, 119, 0, 3080193, 119, 0, 3080194, 119, 0, 3080195, 119, 0, 3080196, 119, 0, 3080197, 119, 0, 3080198, 119, 0, 3080199, 119, 0, 3080200, 119, 0, 3080201, 119, 0, 3080202, 119, 0 )

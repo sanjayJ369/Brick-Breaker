@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 544, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" groups=["wall"]]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 512, 784 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 18, 16, 1008, 16, 1008, 768, 1048, 768, 1048, -24, -24, -24, -24, 768, 18, 768 )

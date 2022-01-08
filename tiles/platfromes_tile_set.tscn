@@ -1,0 +1,1168 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tiles/Terrain (16x16).png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ground 1" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 48, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 2" type="Sprite" parent="."]
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 64, 48, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 3" type="Sprite" parent="."]
+position = Vector2( 128, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 128, 48, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 4" type="Sprite" parent="."]
+position = Vector2( 0, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 0, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 5" type="Sprite" parent="."]
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 64, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 6" type="Sprite" parent="."]
+position = Vector2( 128, 64 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 128, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 7" type="Sprite" parent="."]
+position = Vector2( 0, 112 )
+scale = Vector2( 1, 1.00276 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 0, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 8" type="Sprite" parent="."]
+position = Vector2( 64, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 64, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 9" type="Sprite" parent="."]
+position = Vector2( 128, 112 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 128, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 10" type="Sprite" parent="."]
+position = Vector2( 144, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 128, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 11" type="Sprite" parent="."]
+position = Vector2( 112, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 128, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 12" type="Sprite" parent="."]
+position = Vector2( 80, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 64, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 13" type="Sprite" parent="."]
+position = Vector2( 48, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 64, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 14" type="Sprite" parent="."]
+position = Vector2( 16, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 15" type="Sprite" parent="."]
+position = Vector2( -18, 176 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 16" type="Sprite" parent="."]
+position = Vector2( -48, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 29" type="Sprite" parent="."]
+position = Vector2( -70, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 32, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 30" type="Sprite" parent="."]
+position = Vector2( -24, 264 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 32, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 31" type="Sprite" parent="."]
+position = Vector2( 154, 270 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 160, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 32" type="Sprite" parent="."]
+position = Vector2( 106, 270 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 160, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 33" type="Sprite" parent="."]
+position = Vector2( 72, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 96, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 34" type="Sprite" parent="."]
+position = Vector2( 26, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 96, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 17" type="Sprite" parent="."]
+position = Vector2( 48, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 18" type="Sprite" parent="."]
+position = Vector2( 70, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 22" type="Sprite" parent="."]
+position = Vector2( 128, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 23" type="Sprite" parent="."]
+position = Vector2( 152, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 24" type="Sprite" parent="."]
+position = Vector2( 106, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 19" type="Sprite" parent="."]
+position = Vector2( 26, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 20" type="Sprite" parent="."]
+position = Vector2( -26, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 21" type="Sprite" parent="."]
+position = Vector2( -70, 240 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 25" type="Sprite" parent="."]
+position = Vector2( -47.1582, 262.316 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 32, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 35" type="Sprite" parent="."]
+position = Vector2( -80, 216 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 36" type="Sprite" parent="."]
+position = Vector2( -24, 216 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 26" type="Sprite" parent="."]
+position = Vector2( -48, 216 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 37" type="Sprite" parent="."]
+position = Vector2( 24, 218 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 38" type="Sprite" parent="."]
+position = Vector2( 70, 218 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 39" type="Sprite" parent="."]
+position = Vector2( 46, 218 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 40" type="Sprite" parent="."]
+position = Vector2( 106, 218 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 55" type="Sprite" parent="."]
+position = Vector2( 816, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 56" type="Sprite" parent="."]
+position = Vector2( 836, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 57" type="Sprite" parent="."]
+position = Vector2( 856, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 304, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 58" type="Sprite" parent="."]
+position = Vector2( 816, 60 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 59" type="Sprite" parent="."]
+position = Vector2( 836, 60 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 60" type="Sprite" parent="."]
+position = Vector2( 856, 61 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 304, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 61" type="Sprite" parent="."]
+position = Vector2( 816, 80 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 96, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 62" type="Sprite" parent="."]
+position = Vector2( 836, 80 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 96, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 63" type="Sprite" parent="."]
+position = Vector2( 857, 81 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 304, 96, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 64" type="Sprite" parent="."]
+position = Vector2( 1005, 63 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 9, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 53" type="Sprite" parent="."]
+position = Vector2( 151.46, 218 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 54" type="Sprite" parent="."]
+position = Vector2( 129.01, 217.719 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 41" type="Sprite" parent="."]
+position = Vector2( -32, 312 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 42" type="Sprite" parent="."]
+position = Vector2( -56, 312 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 43" type="Sprite" parent="."]
+position = Vector2( -32, 332 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 44" type="Sprite" parent="."]
+position = Vector2( -56, 332 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 45" type="Sprite" parent="."]
+position = Vector2( 32, 312 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 46" type="Sprite" parent="."]
+position = Vector2( 8, 312 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 47" type="Sprite" parent="."]
+position = Vector2( 32, 332 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 48" type="Sprite" parent="."]
+position = Vector2( 8, 332 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 49" type="Sprite" parent="."]
+position = Vector2( 80, 312 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 50" type="Sprite" parent="."]
+position = Vector2( 56, 312 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 51" type="Sprite" parent="."]
+position = Vector2( 80, 332 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 160, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 52" type="Sprite" parent="."]
+position = Vector2( 56, 332 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 144, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 27" type="Sprite" parent="."]
+position = Vector2( 48, 272 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 96, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ground 28" type="Sprite" parent="."]
+position = Vector2( 130, 270 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 112, 160, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rubble 1" type="Sprite" parent="."]
+position = Vector2( 244, 162 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 33, 8, 7, 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rubble 2" type="Sprite" parent="."]
+position = Vector2( 260, 162 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 36, 96, 4, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rubble 3" type="Sprite" parent="."]
+position = Vector2( 278, 162 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 55, 71, 9, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 1" type="Sprite" parent="."]
+position = Vector2( 192, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 48, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 2" type="Sprite" parent="."]
+position = Vector2( 240, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 0, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 3" type="Sprite" parent="."]
+position = Vector2( 272, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 16, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 4" type="Sprite" parent="."]
+position = Vector2( 304, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 5" type="Sprite" parent="."]
+position = Vector2( 176, 24 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 6" type="Sprite" parent="."]
+position = Vector2( 198, 24 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 7" type="Sprite" parent="."]
+position = Vector2( 216, 24 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 8" type="Sprite" parent="."]
+position = Vector2( 242, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 0, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 9" type="Sprite" parent="."]
+position = Vector2( 242, 60 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 16, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 10" type="Sprite" parent="."]
+position = Vector2( 242, 80 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 32, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 11" type="Sprite" parent="."]
+position = Vector2( 330, 34 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 12" type="Sprite" parent="."]
+position = Vector2( 352, 34 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 13" type="Sprite" parent="."]
+position = Vector2( 370, 34 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 14" type="Sprite" parent="."]
+position = Vector2( 396, 50 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 64, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 15" type="Sprite" parent="."]
+position = Vector2( 396, 70 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 16" type="Sprite" parent="."]
+position = Vector2( 396, 90 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 96, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 17" type="Sprite" parent="."]
+position = Vector2( 492, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 18" type="Sprite" parent="."]
+position = Vector2( 514, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 19" type="Sprite" parent="."]
+position = Vector2( 532, 40 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 20" type="Sprite" parent="."]
+position = Vector2( 558, 56 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 128, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 21" type="Sprite" parent="."]
+position = Vector2( 558, 76 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden block 22" type="Sprite" parent="."]
+position = Vector2( 558, 96 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 160, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock  block 1" type="Sprite" parent="."]
+position = Vector2( 352, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 64, 48, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock  block 2" type="Sprite" parent="."]
+position = Vector2( 400, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 64, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock  block 3" type="Sprite" parent="."]
+position = Vector2( 436, 4 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 80, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock  block 4" type="Sprite" parent="."]
+position = Vector2( 464, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 80, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="semi wooden  block 1" type="Sprite" parent="."]
+position = Vector2( 512, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 128, 48, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="semi wooden  block 2" type="Sprite" parent="."]
+position = Vector2( 560, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 128, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="semi wooden  block 3" type="Sprite" parent="."]
+position = Vector2( 600.185, -7.95534 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 144, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="semi wooden  block 4" type="Sprite" parent="."]
+position = Vector2( 626.806, 24.4136 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="golden  block 1" type="Sprite" parent="."]
+position = Vector2( 672, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 128, 48, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="golden  block 2" type="Sprite" parent="."]
+position = Vector2( 720, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 128, 16, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="golden  block 3" type="Sprite" parent="."]
+position = Vector2( 752, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 144, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="golden  block 4" type="Sprite" parent="."]
+position = Vector2( 784, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 144, 16, 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="brick  block 1" type="Sprite" parent="."]
+position = Vector2( 832, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 64, 48, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="brick  block 2" type="Sprite" parent="."]
+position = Vector2( 880, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 64, 32, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock platfrom 2" type="Sprite" parent="."]
+position = Vector2( 928, 15 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 39, 48, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock platfrom 7" type="Sprite" parent="."]
+position = Vector2( 927.823, -10.4779 )
+scale = Vector2( 0.992625, 1.00491 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 48, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock platfrom 3" type="Sprite" parent="."]
+position = Vector2( 960, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 39, 8, 9, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock platfrom 4" type="Sprite" parent="."]
+position = Vector2( 973.938, -7.99219 )
+scale = Vector2( 0.986111, 0.999512 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 8, 9, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock platfrom 5" type="Sprite" parent="."]
+position = Vector2( 992, -16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 56, 8, 20, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock platfrom 6" type="Sprite" parent="."]
+position = Vector2( 992, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 52, 17, 20, 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 1" type="Sprite" parent="."]
+position = Vector2( 1040, -16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 8, 64, 32, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 2" type="Sprite" parent="."]
+position = Vector2( 1008.19, 0.18729 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 72, 9, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 3" type="Sprite" parent="."]
+position = Vector2( 1041.12, 16.1873 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 8, 103, 32, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 4" type="Sprite" parent="."]
+position = Vector2( 1072, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 39, 72, 9, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 9" type="Sprite" parent="."]
+position = Vector2( 1053.65, 55.8119 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 52, 71, 4, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 5" type="Sprite" parent="."]
+position = Vector2( 1088, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 52, 71, 12, 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 6" type="Sprite" parent="."]
+position = Vector2( 1088, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 80, 12, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 7" type="Sprite" parent="."]
+position = Vector2( 1104, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 56, 80, 8, 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden platfrom 8" type="Sprite" parent="."]
+position = Vector2( 1104, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 52, 72, 12, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 1" type="Sprite" parent="."]
+position = Vector2( 1152, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 128, 48, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 2" type="Sprite" parent="."]
+position = Vector2( 1152, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 168, 48, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 3" type="Sprite" parent="."]
+position = Vector2( 1120, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 128, 10, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 4" type="Sprite" parent="."]
+position = Vector2( 1184, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 38, 128, 10, 48 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 5" type="Sprite" parent="."]
+position = Vector2( 1200, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 54, 134, 10, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 6" type="Sprite" parent="."]
+position = Vector2( 1216, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 134, 10, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 7" type="Sprite" parent="."]
+position = Vector2( 1216, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 64, 144, 10, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="leaf platfrom 8" type="Sprite" parent="."]
+position = Vector2( 1200, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 54, 144, 10, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="gold  platfrom 1" type="Sprite" parent="."]
+position = Vector2( 1264, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 0, 48, 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wooden  platfrom 2" type="Sprite" parent="."]
+position = Vector2( 1264, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 16, 48, 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="rock  platfrom 3" type="Sprite" parent="."]
+position = Vector2( 1264, 32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 32, 48, 6 )
+__meta__ = {
+"_edit_group_": true
+}

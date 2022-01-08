@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=1]
+
+[node name="TileSpawner" type="Node2D"]
+script = ExtResource( 1 )
+source_tilemap = null
+mapping = "res://json addons/objects.json"
+spawn_at_runtime = true

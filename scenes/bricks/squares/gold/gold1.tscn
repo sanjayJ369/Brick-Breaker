@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/bricks/squares/rocks/rock1.tscn" type="PackedScene" id=1]
+
+[node name="gold1" instance=ExtResource( 1 )]
+brick_life = 100
+
+[node name="Sprite" parent="." index="2"]
+region_rect = Rect2( 288, 144, 32, 32 )

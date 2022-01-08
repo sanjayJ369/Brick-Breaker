@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tiles/Terrain (16x16).png" type="Texture" id=1]
+
+[node name="bricks" type="Node2D"]
+
+[node name="wood1" type="Sprite" parent="."]
+position = Vector2( 0, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 16, 32, 32 )
+
+[node name="wood2" type="Sprite" parent="."]
+position = Vector2( 48, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 16, 16, 16 )
+
+[node name="wood3" type="Sprite" parent="."]
+position = Vector2( 8, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 0, 48, 16 )
+
+[node name="wood4" type="Sprite" parent="."]
+position = Vector2( 48, 8 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 0, 16, 48 )
+
+[node name="gold1" type="Sprite" parent="."]
+position = Vector2( 128, 16 )
+scale = Vector2( -1.0142, 0.995866 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 288, 144, 32, 32 )
+
+[node name="gold2" type="Sprite" parent="."]
+position = Vector2( 176, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 144, 16, 16 )
+
+[node name="gold3" type="Sprite" parent="."]
+position = Vector2( 136, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 272, 128, 48, 16 )
+
+[node name="gold4" type="Sprite" parent="."]
+position = Vector2( 176, 8 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 128, 16, 48 )
+
+[node name="rock1" type="Sprite" parent="."]
+position = Vector2( 376, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 80, 32, 32 )
+
+[node name="rock2" type="Sprite" parent="."]
+position = Vector2( 424, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 80, 16, 16 )
+
+[node name="rock3" type="Sprite" parent="."]
+position = Vector2( 384, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 64, 48, 16 )
+
+[node name="rock4" type="Sprite" parent="."]
+position = Vector2( 424, 8 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 64, 16, 48 )
+
+[node name="semi_wood1" type="Sprite" parent="."]
+position = Vector2( 264, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 208, 144, 32, 32 )
+
+[node name="semi_wood2" type="Sprite" parent="."]
+position = Vector2( 320, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 144, 16, 16 )
+
+[node name="semi_wood3" type="Sprite" parent="."]
+position = Vector2( 272, -32 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 192, 128, 48, 16 )
+
+[node name="semi_wood4" type="Sprite" parent="."]
+position = Vector2( 320, 8 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 240, 128, 16, 48 )

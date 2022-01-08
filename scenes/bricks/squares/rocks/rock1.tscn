@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/bricks/bricks.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[node name="rock1" instance=ExtResource( 1 )]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource( 1 )
+
+[node name="Sprite" parent="." index="1"]
+region_rect = Rect2( 208, 80, 32, 32 )
+
+[node name="brick_life" parent="." index="2"]
+margin_left = -9.0
+margin_right = 15.0
+text = ""
