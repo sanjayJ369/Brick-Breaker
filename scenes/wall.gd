@@ -9,6 +9,7 @@ var balls_left
 var can_shoot = true
 var ball = preload("res://scenes/ball/ball_k.tscn")
 export var vel_max = 1000
+export var ball_life = 60
 var v_x = 0
 var v_y = 0
 ######################
@@ -60,6 +61,7 @@ func shoot_balls():
 		var new_ball = ball.instance()
 		new_ball.global_position = cannon_loc
 		new_ball.linear_velocity = comp()
+		new_ball.ball_life =  ball_life
 		get_node("ball").add_child(new_ball)
 		
 		balls_left -= 1

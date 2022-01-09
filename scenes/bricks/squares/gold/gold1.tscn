@@ -5,5 +5,5 @@
 [node name="gold1" instance=ExtResource( 1 )]
 brick_life = 100
 
-[node name="Sprite" parent="." index="2"]
+[node name="Sprite" parent="." index="1"]
 region_rect = Rect2( 288, 144, 32, 32 )

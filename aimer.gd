@@ -17,8 +17,12 @@ export var aim_length = 60
 export var intervel = 1
 var curve = Curve2D.new()
 var sprites = []
+var colours = [Color("6cd9f1"),Color("a4cc42"),Color("f7ec8a"),Color("f18b72"),Color("f89cc0"),Color("f2bc7e")]
 
 func _ready():
+	randomize()
+	
+	
 	for i in range(50):
 		sprites.append(dust.instance())
 		sprites[i].global_position = Vector2(0,0)
@@ -97,6 +101,7 @@ func aim_test(delta,line):
 	
 	if Input.is_mouse_button_pressed(BUTTON_RIGHT):
 		
+		
 		var bounces = 0
 		var b = ball.instance()
 		b.position = cannon_loc
@@ -130,156 +135,11 @@ func comp():
 	return Vector2(v_x,v_y)
 			
 	
-func aim_test1(delta,line):
 
-	line.clear_points()
-	curve.clear_points()
-	if Input.is_mouse_button_pressed(BUTTON_RIGHT):
-		
-		
-		var points 
-		var bounces = 0
-		var b = ball.instance()
-		var total_balls 
-		var sprites = []
-		var p = []
-		var debug = []
-		b.position = cannon_loc
-		b.linear_velocity = comp()
-		get_parent().add_child(b)
-		line.add_point(Vector2.ZERO)
-		
-		while true:
-			var nob
-			var coll = b.move_and_collide(b.linear_velocity*delta)
-			var pl = 0
-			var l = []
-			if coll:
-				
-				line.add_point(line.to_local(b.position))
-				curve.add_point(b.global_position)
-				var vec = (b.position-cannon_loc).normalized()
-				#var dis = pow((pow(b.position.x-cannon_loc.x,2)+ pow(b.position.y- cannon_loc.y,2)),0.5)
-				#nob = int(dis/intervel)
-				l.append(curve.get_baked_length() - pl)
-				pl = curve.get_baked_length()
-				bounces += 1
-				b.linear_velocity = b.linear_velocity.bounce(coll.normal)
-				
-			points = curve.get_baked_points()
-			total_balls = curve.get_baked_length()
-				
-			var num
-			var s = 0
-			if points.size() > 2 :
-				
-				for i in range(curve.get_point_count() - 1):
-					
-					var dis = distance(points[i],points[i+1])
-					num = int(dis/intervel)
-					#print(num,"		",dis/intervel,"		",dis,"	",points[i],"	",points[i+1])
-				
-					for j in range(num+1):
-						
-						if num != 0:
-						#sprites.append(dust.instance())
-						#sprites[p].global_position = curve.interpolate(i,j*(1/num))
-							p.push_back(curve.interpolate(i,j*(1/num)))
-							debug.push_back(Vector2(i,j*(1/num)))
-						#get_parent().add_child(sprites[p])
-						#p += 1
-				
-			
-			if bounces >= max_bounces:
-				#for i in sprites:
-				#	print(i.global_position)
-				#	i.queue_free()
-				for i in p:
-					print(i)
-					
-				print("##########################")
-				for i in debug:
-					print(i)
-				print("$$$$$$$$$$$$$$$$$$$$$$$$$$")
-				for i in line.get_points():
-					print(i)
-				print("%%%%%%%%%%%%%%%%%%%%%%%%%%")
-				b.queue_free()
-				break	
-	
-func aim_test2(delta,line):
 
-	line.clear_points()
-	
-	if Input.is_mouse_button_pressed(BUTTON_RIGHT):
-		
-		var bounces = 0
-		var b = ball.instance()
-		b.position = cannon_loc
-		b.linear_velocity = comp()
-		get_parent().add_child(b)
-		line.add_point(Vector2.ZERO)
-		###################
-		var points = []
-		var dis 
-		var num
-		var curve1 = Curve2D.new()
-
-		
-		while true:
-			
-			var coll = b.move_and_collide(b.linear_velocity*delta)
-			
-			if coll:
-				
-				line.add_point(line.to_local(b.position))
-				bounces += 1
-				b.linear_velocity = b.linear_velocity.bounce(coll.normal)
-				
-			points = line.get_points()	
-			
-			for i in points:
-				curve1.add_point(i)
-				
-			var s = 0
-				
-			for i in range(points.size()-1):
-				
-				dis = distance(points[i],points[i+1])
-				num = int(dis/intervel)
-				
-				
-				
-				for j in range(num+1):
-					if s == 50:
-						break
-					sprites[s].global_position = curve1.interpolate(i,j*(1/num))
-					s += 1
-					print("working",s)
-				
-			if bounces >= max_bounces:
-				
-				b.queue_free()
-				break	
-				
-	if Input.is_mouse_button_pressed(BUTTON_LEFT):
-		
-		for i in sprites:
-			print(i.global_position)
-		
-		
-
-			
-func add_balls(pos,num):
-	var b = []
-	var p = []
-	for i in range(num):
-		b.append(dust.instance())
-		p.append(pos*i)
-	for i in range(num):
-		b[i].position = pos[i]
-		get_parent().add_child(b[i])
-
-	
-func distance(a,b):
-	return abs(pow(pow((a.x-b.x),2) + pow((a.y-b.y),2),0.5))
+func _on_Timer_timeout():
+	var num = randi() % colours.size()
+	line2.set_default_color(colours[num])
+	line1.set_default_color(colours[num])
+	line3.set_default_color(colours[num])
+	pass

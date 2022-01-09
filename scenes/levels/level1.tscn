@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/main.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=2]
+
+[node name="level1" instance=ExtResource( 1 )]
+balls = 50
+ball_life = 10
+
+[node name="TileMap" parent="." index="2"]
+scale = Vector2( 1, 1 )
+mode = 0
+
+[node name="TileSpawner" type="Node2D" parent="." index="11"]
+script = ExtResource( 2 )
+source_tilemap = NodePath("../TileMap")
+mapping = "res://json addons/objects2.json"
+target_node = NodePath("../bricks")
+
+[editable path="StaticBody2D"]

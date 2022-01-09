@@ -1,22 +1,22 @@
 [gd_resource type="TileSet" load_steps=18 format=2]
 
 [ext_resource path="res://tiles/Terrain (16x16).png" type="Texture" id=1]
-[ext_resource path="res://tiles/plotform/triangle/rock/Terrain (16x16)-expor4.png" type="Texture" id=2]
-[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export3.png" type="Texture" id=3]
-[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export2.png" type="Texture" id=4]
-[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor3.png" type="Texture" id=5]
-[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor1.png" type="Texture" id=6]
-[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export1.png" type="Texture" id=7]
-[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor4.png" type="Texture" id=8]
+[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export.png" type="Texture" id=2]
+[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export1.png" type="Texture" id=3]
+[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export1.png" type="Texture" id=4]
+[ext_resource path="res://tiles/plotform/triangle/rock/Terrain (16x16)-expor4.png" type="Texture" id=5]
+[ext_resource path="res://tiles/plotform/triangle/rock/Terrain (16x16)-export2.png" type="Texture" id=6]
+[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export2.png" type="Texture" id=7]
+[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export2.png" type="Texture" id=8]
 [ext_resource path="res://tiles/plotform/triangle/rock/Terrain (16x16)-export3.png" type="Texture" id=9]
-[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor2.png" type="Texture" id=10]
-[ext_resource path="res://tiles/plotform/triangle/rock/Terrain (16x16)-export1.png" type="Texture" id=11]
-[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export2.png" type="Texture" id=12]
-[ext_resource path="res://tiles/plotform/triangle/rock/Terrain (16x16)-export2.png" type="Texture" id=13]
-[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export4.png" type="Texture" id=14]
-[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export.png" type="Texture" id=15]
-[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export3.png" type="Texture" id=16]
-[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export1.png" type="Texture" id=17]
+[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export4.png" type="Texture" id=10]
+[ext_resource path="res://tiles/plotform/triangle/wood/Terrain (16x16)-export3.png" type="Texture" id=11]
+[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor1.png" type="Texture" id=12]
+[ext_resource path="res://tiles/plotform/triangle/gold/Terrain (16x16)-export3.png" type="Texture" id=13]
+[ext_resource path="res://tiles/plotform/triangle/rock/Terrain (16x16)-export1.png" type="Texture" id=14]
+[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor4.png" type="Texture" id=15]
+[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor2.png" type="Texture" id=16]
+[ext_resource path="res://tiles/plotform/triangle/semi_wood/Terrain (16x16)-expor3.png" type="Texture" id=17]
 
 [resource]
 0/name = "wood1"
@@ -244,7 +244,7 @@
 15/shapes = [  ]
 15/z_index = 0
 16/name = "gold_bl"
-16/texture = ExtResource( 7 )
+16/texture = ExtResource( 4 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 0, 0, 32, 32 )
@@ -258,7 +258,7 @@
 16/shapes = [  ]
 16/z_index = 0
 17/name = "gold_br"
-17/texture = ExtResource( 16 )
+17/texture = ExtResource( 13 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 0, 0, 32, 32 )
@@ -272,7 +272,7 @@
 17/shapes = [  ]
 17/z_index = 0
 18/name = "gold_tl"
-18/texture = ExtResource( 14 )
+18/texture = ExtResource( 10 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 0, 0, 32, 32 )
@@ -286,7 +286,7 @@
 18/shapes = [  ]
 18/z_index = 0
 19/name = "gold_tr"
-19/texture = ExtResource( 12 )
+19/texture = ExtResource( 8 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 0, 0, 32, 32 )
@@ -300,7 +300,7 @@
 19/shapes = [  ]
 19/z_index = 0
 20/name = "rock_bl"
-20/texture = ExtResource( 11 )
+20/texture = ExtResource( 14 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 0, 0, 32, 32 )
@@ -328,7 +328,7 @@
 21/shapes = [  ]
 21/z_index = 0
 22/name = "rock_tl"
-22/texture = ExtResource( 2 )
+22/texture = ExtResource( 5 )
 22/tex_offset = Vector2( 0, 0 )
 22/modulate = Color( 1, 1, 1, 1 )
 22/region = Rect2( 0, 0, 32, 32 )
@@ -342,7 +342,7 @@
 22/shapes = [  ]
 22/z_index = 0
 23/name = "rock_tr"
-23/texture = ExtResource( 13 )
+23/texture = ExtResource( 6 )
 23/tex_offset = Vector2( 0, 0 )
 23/modulate = Color( 1, 1, 1, 1 )
 23/region = Rect2( 0, 0, 32, 32 )
@@ -356,7 +356,7 @@
 23/shapes = [  ]
 23/z_index = 0
 24/name = "semi_wood_bl"
-24/texture = ExtResource( 5 )
+24/texture = ExtResource( 17 )
 24/tex_offset = Vector2( 0, 0 )
 24/modulate = Color( 1, 1, 1, 1 )
 24/region = Rect2( 0, 0, 32, 32 )
@@ -370,7 +370,7 @@
 24/shapes = [  ]
 24/z_index = 0
 25/name = "semi_wood_br"
-25/texture = ExtResource( 6 )
+25/texture = ExtResource( 12 )
 25/tex_offset = Vector2( 0, 0 )
 25/modulate = Color( 1, 1, 1, 1 )
 25/region = Rect2( 0, 0, 32, 32 )
@@ -384,7 +384,7 @@
 25/shapes = [  ]
 25/z_index = 0
 26/name = "semi_wood_tl"
-26/texture = ExtResource( 10 )
+26/texture = ExtResource( 16 )
 26/tex_offset = Vector2( 0, 0 )
 26/modulate = Color( 1, 1, 1, 1 )
 26/region = Rect2( 0, 0, 32, 32 )
@@ -398,7 +398,7 @@
 26/shapes = [  ]
 26/z_index = 0
 27/name = "semi_wood_tr"
-27/texture = ExtResource( 8 )
+27/texture = ExtResource( 15 )
 27/tex_offset = Vector2( 0, 0 )
 27/modulate = Color( 1, 1, 1, 1 )
 27/region = Rect2( 0, 0, 32, 32 )
@@ -412,7 +412,7 @@
 27/shapes = [  ]
 27/z_index = 0
 28/name = "wood_bl"
-28/texture = ExtResource( 15 )
+28/texture = ExtResource( 2 )
 28/tex_offset = Vector2( 0, 0 )
 28/modulate = Color( 1, 1, 1, 1 )
 28/region = Rect2( 0, 0, 32, 32 )
@@ -426,7 +426,7 @@
 28/shapes = [  ]
 28/z_index = 0
 29/name = "wood_br"
-29/texture = ExtResource( 3 )
+29/texture = ExtResource( 11 )
 29/tex_offset = Vector2( 0, 0 )
 29/modulate = Color( 1, 1, 1, 1 )
 29/region = Rect2( 0, 0, 32, 32 )
@@ -440,7 +440,7 @@
 29/shapes = [  ]
 29/z_index = 0
 30/name = "wood_tl"
-30/texture = ExtResource( 4 )
+30/texture = ExtResource( 7 )
 30/tex_offset = Vector2( 0, 0 )
 30/modulate = Color( 1, 1, 1, 1 )
 30/region = Rect2( 0, 0, 32, 32 )
@@ -454,7 +454,7 @@
 30/shapes = [  ]
 30/z_index = 0
 31/name = "wood_tr"
-31/texture = ExtResource( 17 )
+31/texture = ExtResource( 3 )
 31/tex_offset = Vector2( 0, 0 )
 31/modulate = Color( 1, 1, 1, 1 )
 31/region = Rect2( 0, 0, 32, 32 )
