@@ -13,11 +13,14 @@ func _ready():
 	
 
 func _physics_process(delta):
+	
 	var coll = move_and_collide(linear_velocity*delta)
 	if coll:
 		linear_velocity = linear_velocity.bounce(coll.normal)
 		if coll.collider.has_method("take_life") and aim == true:
 			coll.collider.take_life()
+		if coll.collider.has_method("kill_ball") and aim == true:
+			queue_free()
 			
 
 func _on_Timer_timeout():

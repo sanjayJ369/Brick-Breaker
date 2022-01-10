@@ -3,7 +3,7 @@ extends Node2D
 
 
 ######balls###########
-export var balls = 60
+export var balls = 60#-1 for infinite balls 
 export var delay = 0.2
 var balls_left
 var can_shoot = true
@@ -50,21 +50,27 @@ func _process(delta):
 	$Sprite.position = cannon_1()
 	cannon_body.rotate((crota-rota))
 	crota = rota
-	$Label.text = str(balls_left)
+	if balls == -1:
+		$Label.text = str("INFINITE")
+	else:
+		$Label.text = str(balls_left)
 	
 	if Input.is_action_pressed("shoot"):
 		shoot_balls()
 		
 func shoot_balls():
 	
-	if can_shoot == true and balls_left > 0:
+	if can_shoot == true and (balls_left > 0 or balls == -1):
+		
 		var new_ball = ball.instance()
 		new_ball.global_position = cannon_loc
 		new_ball.linear_velocity = comp()
 		new_ball.ball_life =  ball_life
 		get_node("ball").add_child(new_ball)
 		
-		balls_left -= 1
+		if balls != -1:
+			balls_left -= 1
+			
 		can_shoot = false
 		$shoot_delay.start(delay)
 		yield($shoot_delay,"timeout")

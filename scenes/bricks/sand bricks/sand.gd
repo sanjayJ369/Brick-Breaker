@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+
 export var brick_life = 15
 var life = brick_life
 
@@ -11,4 +12,6 @@ func take_life():
 	$brick_life.text = str(life)
 	if life == 0:
 		queue_free()
-
+		
+func kill_ball():
+	pass

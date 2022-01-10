@@ -1,13 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tiles/new_tiles_test.tres" type="TileSet" id=3]
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
+[ext_resource path="res://scenes/bricks/squares/gold/gold1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/bricks/rectangle/gold_rec.tscn" type="PackedScene" id=7]
+[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
+[ext_resource path="res://scenes/bricks/sand bricks/sand.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/bricks/triangles/gold/gold_bl.tscn" type="PackedScene" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -15,7 +20,7 @@ font_data = ExtResource( 4 )
 
 [node name="control" type="Node2D"]
 script = ExtResource( 1 )
-balls = 270
+balls = -1
 delay = 0.1
 vel_max = 500
 max_bounces = 45
@@ -30,6 +35,7 @@ mode = 2
 tile_set = ExtResource( 3 )
 compatibility_mode = true
 format = 1
+tile_data = PoolIntArray( 131076, 16, 0, 131077, 16, 0, 131079, 4, 0, 131080, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 196612, 16, 0, 196613, 16, 0, 196615, 4, 0, 196616, 4, 0, 196617, 4, 0, 196618, 4, 0, 196619, 4, 0, 196620, 4, 0, 262148, 16, 0, 262149, 16, 0, 327684, 16, 0, 327685, 16, 0, 327687, 6, 0, 327688, 6, 0, 327689, 6, 0, 327690, 6, 0, 327691, 6, 0, 327692, 6, 0, 393220, 16, 0, 393221, 16, 0, 458756, 16, 0, 458757, 16, 0 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 5 )
@@ -66,6 +72,117 @@ texture = ExtResource( 11 )
 [node name="bricks" type="Node2D" parent="."]
 position = Vector2( 0, 8 )
 
+[node name="gold_bl" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 288, 152 )
+
+[node name="gold_bl2" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 352, 152 )
+
+[node name="gold1" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 480, 152 )
+brick_life = 15
+
+[node name="gold2" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 544, 152 )
+brick_life = 15
+
+[node name="gold3" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 608, 152 )
+brick_life = 15
+
+[node name="gold4" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 672, 152 )
+brick_life = 15
+
+[node name="gold5" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 736, 152 )
+brick_life = 15
+
+[node name="gold6" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 800, 152 )
+brick_life = 15
+
+[node name="gold_bl3" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 288, 216 )
+
+[node name="gold_bl4" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 352, 216 )
+
+[node name="gold7" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 480, 216 )
+brick_life = 15
+
+[node name="gold8" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 544, 216 )
+brick_life = 15
+
+[node name="gold9" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 608, 216 )
+brick_life = 15
+
+[node name="gold10" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 672, 216 )
+brick_life = 15
+
+[node name="gold11" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 736, 216 )
+brick_life = 15
+
+[node name="gold12" parent="bricks" instance=ExtResource( 6 )]
+position = Vector2( 800, 216 )
+brick_life = 15
+
+[node name="gold_bl5" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 288, 280 )
+
+[node name="gold_bl6" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 352, 280 )
+
+[node name="gold_bl7" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 288, 344 )
+
+[node name="gold_bl8" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 352, 344 )
+
+[node name="gold_rec" parent="bricks" instance=ExtResource( 7 )]
+position = Vector2( 480, 344 )
+
+[node name="gold_rec2" parent="bricks" instance=ExtResource( 7 )]
+position = Vector2( 544, 344 )
+
+[node name="gold_rec3" parent="bricks" instance=ExtResource( 7 )]
+position = Vector2( 608, 344 )
+
+[node name="gold_rec4" parent="bricks" instance=ExtResource( 7 )]
+position = Vector2( 672, 344 )
+
+[node name="gold_rec5" parent="bricks" instance=ExtResource( 7 )]
+position = Vector2( 736, 344 )
+
+[node name="gold_rec6" parent="bricks" instance=ExtResource( 7 )]
+position = Vector2( 800, 344 )
+
+[node name="gold_bl9" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 288, 408 )
+
+[node name="gold_bl10" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 352, 408 )
+
+[node name="gold_bl11" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 288, 472 )
+
+[node name="gold_bl12" parent="bricks" instance=ExtResource( 14 )]
+position = Vector2( 352, 472 )
+
 [node name="aim" type="Node2D" parent="."]
+
+[node name="TileSpawner" type="Node2D" parent="."]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../TileMap")
+mapping = "res://json addons/objects2.json"
+target_node = NodePath("../bricks")
+
+[node name="sand" parent="." instance=ExtResource( 9 )]
+position = Vector2( 840, 472 )
 
 [editable path="StaticBody2D"]
