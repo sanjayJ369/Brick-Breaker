@@ -1,19 +1,64 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/main.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=2]
+[ext_resource path="res://scenes/bricks/squares/wood/wood1.tscn" type="PackedScene" id=3]
 
 [node name="level1" instance=ExtResource( 1 )]
 balls = 50
 ball_life = 10
 
-[node name="TileMap" parent="." index="2"]
-scale = Vector2( 1, 1 )
-mode = 0
+[node name="rectange_and_square" parent="." index="2"]
+tile_data = PoolIntArray( 720907, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720915, 0, 0, 786443, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786451, 0, 0, 851979, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851987, 0, 0 )
+
+[node name="wood10" parent="bricks" index="0" instance=ExtResource( 3 )]
+position = Vector2( 368, 360 )
+
+[node name="wood11" parent="bricks" index="1" instance=ExtResource( 3 )]
+position = Vector2( 464, 360 )
+
+[node name="wood12" parent="bricks" index="2" instance=ExtResource( 3 )]
+position = Vector2( 496, 360 )
+
+[node name="wood13" parent="bricks" index="3" instance=ExtResource( 3 )]
+position = Vector2( 528, 360 )
+
+[node name="wood14" parent="bricks" index="4" instance=ExtResource( 3 )]
+position = Vector2( 624, 360 )
+
+[node name="wood15" parent="bricks" index="5" instance=ExtResource( 3 )]
+position = Vector2( 368, 392 )
+
+[node name="wood16" parent="bricks" index="6" instance=ExtResource( 3 )]
+position = Vector2( 464, 392 )
+
+[node name="wood17" parent="bricks" index="7" instance=ExtResource( 3 )]
+position = Vector2( 496, 392 )
+
+[node name="wood18" parent="bricks" index="8" instance=ExtResource( 3 )]
+position = Vector2( 528, 392 )
+
+[node name="wood19" parent="bricks" index="9" instance=ExtResource( 3 )]
+position = Vector2( 624, 392 )
+
+[node name="wood20" parent="bricks" index="10" instance=ExtResource( 3 )]
+position = Vector2( 368, 424 )
+
+[node name="wood21" parent="bricks" index="11" instance=ExtResource( 3 )]
+position = Vector2( 464, 424 )
+
+[node name="wood22" parent="bricks" index="12" instance=ExtResource( 3 )]
+position = Vector2( 496, 424 )
+
+[node name="wood23" parent="bricks" index="13" instance=ExtResource( 3 )]
+position = Vector2( 528, 424 )
+
+[node name="wood24" parent="bricks" index="14" instance=ExtResource( 3 )]
+position = Vector2( 624, 424 )
 
 [node name="TileSpawner" type="Node2D" parent="." index="11"]
 script = ExtResource( 2 )
-source_tilemap = NodePath("../TileMap")
+source_tilemap = null
 mapping = "res://json addons/objects2.json"
 target_node = NodePath("../bricks")
 
