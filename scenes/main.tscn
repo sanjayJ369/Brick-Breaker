@@ -121,7 +121,7 @@ target_node = NodePath("../../bricks/squares")
 
 [node name="triangles" type="Node2D" parent="tile_spawner"]
 script = ExtResource( 8 )
-source_tilemap = null
+source_tilemap = NodePath("../../tilemaps/triangles")
 mapping = "res://json addons/objects2.json"
 target_node = NodePath("../../bricks/triangles")
 
