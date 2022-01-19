@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
-[ext_resource path="res://scenes/bricks/bricks.gd" type="Script" id=7]
 [ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
@@ -83,70 +82,44 @@ texture = ExtResource( 11 )
 [node name="bricks" type="Node2D" parent="."]
 position = Vector2( 0, 8 )
 
-[node name="wood1" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood1" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 432, 104 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood2" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood2" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 176, 136 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood3" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood3" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 432, 168 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood4" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood4" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 176, 200 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood5" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood5" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 656, 200 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood6" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood6" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 432, 232 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood7" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood7" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 176, 264 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood8" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood8" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 752, 328 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood9" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood9" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 624, 424 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood10" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood10" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 880, 424 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood11" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood11" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 752, 648 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood12" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood12" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 976, 680 )
-collision_layer = 2
-script = ExtResource( 7 )
 
-[node name="wood13" type="StaticBody2D" parent="bricks" groups=["brick"] instance=ExtResource( 3 )]
+[node name="wood13" parent="bricks" instance=ExtResource( 3 )]
 position = Vector2( 944, 712 )
-collision_layer = 2
-script = ExtResource( 7 )
 
 [node name="aim" type="Node2D" parent="."]
 
