@@ -21,12 +21,7 @@ var colours = [Color("6cd9f1"),Color("a4cc42"),Color("f7ec8a"),Color("f18b72"),C
 
 func _ready():
 	randomize()
-	
-	
-	for i in range(50):
-		sprites.append(dust.instance())
-		sprites[i].global_position = Vector2(0,0)
-		get_parent().add_child(sprites[i])
+
 	line1.global_position = loc - Vector2(radius,0)
 	line2.global_position = loc
 	line3.global_position = loc + Vector2(radius,0)

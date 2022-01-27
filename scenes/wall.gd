@@ -22,6 +22,8 @@ var crota = (PI/2)
 export var loc = Vector2(512,700)
 export var max_bounces = 60
 
+#onready var bomb = get_node("golden_bomb")###################
+
 var edge_backgrounds = [preload("res://back_grounds/background_scenes/leaf_background.tscn"),preload("res://back_grounds/background_scenes/rock_background.tscn"),
 preload("res://back_grounds/background_scenes/wood_background.tscn")]
 
@@ -35,6 +37,7 @@ var start_bricks = Vector2(50,36)
 
 
 func _ready():
+	
 	
 	$aimer.cannon_loc = cannon_body.position
 	
@@ -154,3 +157,12 @@ func cannon_1():
 	
 	return Vector2(cannon_loc.x+x,cannon_loc.y-abs(y))
 	
+#func destroy():
+#	print("receved the signal")
+#	bomb.disconnect("nuclear",self,destroy())
+#	pass
+
+
+func _on_golden_bomb_nuclear():
+	
+	$bricks.queue_free()

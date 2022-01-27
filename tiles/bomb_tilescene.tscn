@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://tiles/plotform/bomb blocks/1-BOMB/1-Bomb Off/bomb_off_centered.png" type="Texture" id=1]
+
+[node name="bomb" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
