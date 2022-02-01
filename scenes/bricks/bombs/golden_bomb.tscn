@@ -83,7 +83,7 @@ radius = 15.0333
 [sub_resource type="DynamicFont" id=14]
 font_data = ExtResource( 13 )
 
-[node name="golden_bomb" type="StaticBody2D"]
+[node name="golden_bomb" type="StaticBody2D" groups=["brick"]]
 script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

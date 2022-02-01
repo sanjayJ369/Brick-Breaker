@@ -22,7 +22,7 @@ var crota = (PI/2)
 export var loc = Vector2(512,700)
 export var max_bounces = 60
 
-#onready var bomb = get_node("golden_bomb")###################
+onready var bomb = get_node("golden_bomb")###################
 
 var edge_backgrounds = [preload("res://back_grounds/background_scenes/leaf_background.tscn"),preload("res://back_grounds/background_scenes/rock_background.tscn"),
 preload("res://back_grounds/background_scenes/wood_background.tscn")]
@@ -34,10 +34,13 @@ preload("res://back_grounds/Background/purple.tscn"),preload("res://back_grounds
 
 
 var start_bricks = Vector2(50,36)
-
+onready var golden_brick = get_node("golden_brick")
 
 func _ready():
 	
+	if bomb != null:
+		bomb.connect("nuclear",self,"_on_golden_bomb_nuclear")
+		print("connected")
 	
 	$aimer.cannon_loc = cannon_body.position
 	
