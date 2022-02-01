@@ -304,6 +304,6 @@ mapping = "res://json addons/bomb_tile.json"
 target_node = NodePath("../../bricks/bomb")
 
 [node name="golden_bomb" parent="." instance=ExtResource( 3 )]
-position = Vector2( 496, 584 )
+position = Vector2( 501, 568 )
 
 [editable path="StaticBody2D"]
