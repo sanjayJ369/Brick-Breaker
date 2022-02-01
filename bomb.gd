@@ -39,7 +39,7 @@ func destroy():
 	var count = $rays.get_child_count()
 	for i in range(count):
 		var node = "RayCast2D" + String(i+1)
-		if rays.get_node(node).is_colliding():
+		if rays.get_node(node).is_colliding() and rays.get_node(node).get_collider() != null:
 			if rays.get_node(node).get_collider().has_method("take_life"):
 				rays.get_node(node).get_collider().take_life()
 	

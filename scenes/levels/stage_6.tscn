@@ -22,7 +22,7 @@ script = ExtResource( 1 )
 balls = -1
 delay = 0.1
 vel_max = 500
-ball_life = 100
+ball_life = 15
 max_bounces = 45
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
