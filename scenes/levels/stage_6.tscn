@@ -201,11 +201,9 @@ position = Vector2( 752, 720 )
 
 [node name="bomb" parent="bricks/bomb" instance=ExtResource( 13 )]
 position = Vector2( 464, 368 )
-blast_bombs = 1
 
 [node name="bomb2" parent="bricks/bomb" instance=ExtResource( 13 )]
 position = Vector2( 528, 368 )
-blast_bombs = 1
 
 [node name="bomb3" parent="bricks/bomb" instance=ExtResource( 13 )]
 position = Vector2( 496, 400 )
