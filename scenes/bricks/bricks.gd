@@ -6,6 +6,7 @@ var life = brick_life
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
+	life = brick_life
 	$brick_life.text = str(life)
 	
 func take_life():

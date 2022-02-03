@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 export var brick_life = 15
-var life = brick_life
+var life 
 
 onready var ani = $AnimatedSprite
 onready var audio = $AudioStreamPlayer2D
@@ -10,6 +10,8 @@ signal nuclear
 var check = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	life = brick_life
 	$brick_life.text = str(life)
 	
 func _process(delta):
