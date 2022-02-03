@@ -3,6 +3,7 @@ extends StaticBody2D
 export var brick_life = 15
 var life = brick_life
 var blast = false
+export var blast_bombs = 0#if 0 it will not destroy the bombs if 1 it will destroy the bombs 
 onready var ani = $AnimatedSprite
 onready var rays = $rays
 
@@ -40,16 +41,13 @@ func destroy():
 	for i in range(count):
 		var node = "RayCast2D" + String(i+1)
 		if rays.get_node(node).is_colliding() and rays.get_node(node).get_collider() != null:
-			if rays.get_node(node).get_collider().has_method("take_life"):
-				rays.get_node(node).get_collider().take_life()
+			if rays.get_node(node).get_collider().has_method("blast"):
+				rays.get_node(node).get_collider().blast()
 	
+	
+func blast():
+	if blast_bombs == 1:
+		life = 0
+		
 
 
-func _on_Timer_timeout():
-	queue_free()
-
-
-
-func _on_AnimatedSprite_animation_finished():
-	if blast:
-		queue_free()

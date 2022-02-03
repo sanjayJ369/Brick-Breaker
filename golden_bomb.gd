@@ -23,7 +23,6 @@ func _process(delta):
 	if check < 1 and life == 0:
 		check = check + 1
 		$brick_life.text = " "
-		print("working")
 		emit_signal("nuclear")
 		ani.position = ani.to_local(Vector2(512,448))
 		ani.play("blast")

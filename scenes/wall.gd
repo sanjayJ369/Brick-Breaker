@@ -165,7 +165,6 @@ func cannon_1():
 #	bomb.disconnect("nuclear",self,destroy())
 #	pass
 
-
 func _on_golden_bomb_nuclear():
 	
 	$bricks.queue_free()
