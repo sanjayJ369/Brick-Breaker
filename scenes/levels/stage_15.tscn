@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/bricks/bricks.gd" type="Script" id=3]
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
@@ -13,7 +12,6 @@
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/bricks/squares/rocks/rock1.tscn" type="PackedScene" id=13]
-[ext_resource path="res://bomb.gd" type="Script" id=14]
 [ext_resource path="res://scenes/bricks/bombs/bomb.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=1]
@@ -65,862 +63,574 @@ position = Vector2( 0, 8 )
 
 [node name="squares" type="Node2D" parent="bricks"]
 
-[node name="rock1" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock1" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 112 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock2" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock2" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 112 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock3" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock3" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 144 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock4" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock4" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 144 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock5" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock5" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 144 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock6" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock6" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 144 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock7" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock7" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 144 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock8" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock8" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 144 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock9" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock9" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 144 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock10" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock10" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock11" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock11" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock12" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock12" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock13" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock13" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock14" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock14" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock15" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock15" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock16" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock16" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock17" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock17" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock18" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock18" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 176 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock19" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock19" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock20" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock20" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock21" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock21" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock22" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock22" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock23" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock23" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock24" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock24" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock25" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock25" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock26" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock26" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock27" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock27" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 208 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock28" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock28" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 336, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock29" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock29" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock30" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock30" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock31" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock31" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock32" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock32" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock33" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock33" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock34" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock34" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock35" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock35" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock36" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock36" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock37" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock37" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock38" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock38" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 656, 240 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock39" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock39" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock40" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock40" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 336, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock41" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock41" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock42" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock42" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock43" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock43" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock44" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock44" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock45" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock45" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock46" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock46" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock47" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock47" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock48" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock48" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock49" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock49" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock50" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock50" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 656, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock51" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock51" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 272 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock52" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock52" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 272, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock53" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock53" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock54" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock54" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 336, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock55" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock55" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock56" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock56" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock57" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock57" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock58" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock58" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock59" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock59" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock60" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock60" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock61" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock61" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock62" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock62" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock63" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock63" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock64" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock64" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 656, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock65" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock65" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock66" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock66" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 720, 304 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock67" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock67" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 272, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock68" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock68" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock69" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock69" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 336, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock70" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock70" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock71" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock71" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock72" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock72" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock73" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock73" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock74" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock74" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock75" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock75" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock76" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock76" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock77" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock77" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock78" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock78" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock79" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock79" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 656, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock80" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock80" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock81" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock81" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 720, 336 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock82" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock82" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 272, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock83" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock83" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock84" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock84" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 336, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock85" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock85" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock86" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock86" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock87" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock87" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock88" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock88" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock89" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock89" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock90" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock90" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 656, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock91" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock91" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock92" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock92" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 720, 368 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock93" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock93" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 272, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock94" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock94" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock95" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock95" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock96" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock96" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock97" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock97" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock98" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock98" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock99" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock99" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock100" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock100" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock101" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock101" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock102" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock102" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock103" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock103" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock104" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock104" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 720, 400 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock105" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock105" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 272, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock106" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock106" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock107" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock107" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 336, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock108" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock108" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock109" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock109" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 400, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock110" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock110" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock111" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock111" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock112" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock112" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock113" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock113" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 592, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock114" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock114" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock115" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock115" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 656, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock116" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock116" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock117" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock117" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 720, 432 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock118" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock118" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 464 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock119" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock119" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 464 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock120" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock120" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 464 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock121" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock121" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 464 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock122" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock122" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 464 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock123" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock123" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 464 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock124" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock124" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 496 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock125" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock125" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 496 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock126" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock126" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 496 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 600
 
-[node name="rock127" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock127" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 496 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 600
 
-[node name="rock128" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock128" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 496 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 600
 
-[node name="rock129" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock129" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 496 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock130" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock130" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 496 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock131" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock131" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 528 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock132" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock132" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 368, 528 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock133" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock133" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 528 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 600
 
-[node name="rock134" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock134" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 624, 528 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
-[node name="rock135" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+[node name="rock135" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 528 )
-collision_layer = 2
-script = ExtResource( 3 )
 brick_life = 120
 
 [node name="bomb" type="Node2D" parent="bricks"]
 
-[node name="bomb" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 400, 368 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb2" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb2" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 464, 368 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb3" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb3" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 528, 368 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb4" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb4" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 592, 368 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb5" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb5" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 336, 400 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb6" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb6" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 496, 400 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb7" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb7" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 656, 400 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb8" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb8" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 336, 464 )
-collision_layer = 2
-script = ExtResource( 14 )
 
-[node name="bomb9" type="StaticBody2D" parent="bricks/bomb" groups=["brick"] instance=ExtResource( 15 )]
+[node name="bomb9" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 656, 464 )
-collision_layer = 2
-script = ExtResource( 14 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 494, 713 )

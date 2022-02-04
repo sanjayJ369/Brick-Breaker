@@ -17,7 +17,7 @@ func _ready():
 func _process(delta):
 	
 
-	if life < 10:
+	if life < 10 and life > 1:
 		ani.play("on")
 	
 	if life == 0:
@@ -30,6 +30,7 @@ func _process(delta):
 		queue_free()
 	
 func take_life():
+	
 	life -= 1
 	$brick_life.text = str(life)
 	if life == 0:
