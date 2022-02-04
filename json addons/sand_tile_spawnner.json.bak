@@ -1,0 +1,29 @@
+{
+	"B_C":{
+		"scene":"res://scenes/bricks/sand bricks/bc.tscn"
+	},
+	"B_R":{
+		"scene":"res://scenes/bricks/sand bricks/bR.tscn"
+	},
+	"B_L":{
+		"scene":"res://scenes/bricks/sand bricks/bL.tscn"
+	},
+	"M_C":{
+		"scene":"res://scenes/bricks/sand bricks/mc.tscn"
+	},
+	"M_R":{
+		"scene":"res://scenes/bricks/sand bricks/mr.tscn"
+	},
+	"M_L":{
+		"scene":"res://scenes/bricks/sand bricks/ml.tscn"
+	},
+	"T_C":{
+		"scene":"res://scenes/bricks/sand bricks/tc.tscn"
+	},
+	"T_R":{
+		"scene":"res://scenes/bricks/sand bricks/tr.tscn"
+	},
+	"T_L":{
+		"scene":"res://scenes/bricks/sand bricks/tl.tscn"
+	}
+}

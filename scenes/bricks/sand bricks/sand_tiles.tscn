@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/bricks/sand bricks/Sand Mud Ice (16x6).png" type="Texture" id=1]
+
+[node name="sand_tiles" type="Node2D"]
+
+[node name="T_L" type="Sprite" parent="."]
+position = Vector2( -142, -44 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="T_R" type="Sprite" parent="."]
+position = Vector2( -97, -42 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="T_C" type="Sprite" parent="."]
+position = Vector2( -121, -44 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="B_L" type="Sprite" parent="."]
+position = Vector2( -142, 0 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 32, 16, 16 )
+
+[node name="B_R" type="Sprite" parent="."]
+position = Vector2( -98, -1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 32, 16, 16 )
+
+[node name="B_C" type="Sprite" parent="."]
+position = Vector2( -119, -1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 32, 16, 16 )
+
+[node name="M_L" type="Sprite" parent="."]
+position = Vector2( -143, -22 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="M_C" type="Sprite" parent="."]
+position = Vector2( -120, -23 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="M_R" type="Sprite" parent="."]
+position = Vector2( -97, -22 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 16 )
