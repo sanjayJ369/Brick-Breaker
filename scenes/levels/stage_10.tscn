@@ -20,11 +20,10 @@ font_data = ExtResource( 4 )
 
 [node name="stage10" type="Node2D"]
 script = ExtResource( 1 )
-balls = 80
 delay = 0.1
 vel_max = 500
 ball_life = 30
-max_bounces = 45
+max_bounces = 20
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
