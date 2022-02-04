@@ -621,7 +621,7 @@ position = Vector2( 592, 368 )
 position = Vector2( 336, 400 )
 
 [node name="bomb6" parent="bricks/bomb" instance=ExtResource( 15 )]
-position = Vector2( 496, 400 )
+position = Vector2( 496, 399 )
 
 [node name="bomb7" parent="bricks/bomb" instance=ExtResource( 15 )]
 position = Vector2( 656, 400 )

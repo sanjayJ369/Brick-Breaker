@@ -20,7 +20,7 @@ func _process(delta):
 	if life < 10 and life > 1:
 		ani.play("on")
 	
-	if life == 0:
+	if life <= 0:
 		$brick_life.text = "  "
 		$CollisionShape2D.disabled = true
 		#$Timer.start(0.5)
