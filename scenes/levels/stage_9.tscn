@@ -20,11 +20,11 @@ font_data = ExtResource( 4 )
 
 [node name="stage9" type="Node2D"]
 script = ExtResource( 1 )
-balls = -1
+balls = 40
 delay = 0.1
 vel_max = 500
 ball_life = 30
-max_bounces = 45
+max_bounces = 10
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
@@ -65,35 +65,35 @@ position = Vector2( 0, 8 )
 
 [node name="rock1" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 432 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock2" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 432 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock3" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 432 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock4" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 432 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock5" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 432 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock6" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 432 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock7" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 432 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock8" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 464 )
-brick_life = 30
+brick_life = 60
 
 [node name="wood1" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 464, 464 )
@@ -103,11 +103,11 @@ position = Vector2( 528, 464 )
 
 [node name="rock9" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 464 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock10" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 496 )
-brick_life = 30
+brick_life = 60
 
 [node name="wood3" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 464, 496 )
@@ -117,11 +117,11 @@ position = Vector2( 528, 496 )
 
 [node name="rock11" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 496 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock12" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 528 )
-brick_life = 30
+brick_life = 60
 
 [node name="wood5" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 464, 528 )
@@ -131,59 +131,59 @@ position = Vector2( 528, 528 )
 
 [node name="rock13" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 528 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock14" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 560 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock15" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 432, 560 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock16" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 464, 560 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock17" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 496, 560 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock18" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 528, 560 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock19" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 560, 560 )
-brick_life = 30
+brick_life = 120
 
 [node name="rock20" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 560 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock21" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 592 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock22" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 592 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock23" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 624 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock24" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 624 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock25" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 304, 656 )
-brick_life = 30
+brick_life = 60
 
 [node name="rock26" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 656 )
-brick_life = 30
+brick_life = 60
 
 [node name="bomb" type="Node2D" parent="bricks"]
 
