@@ -17,7 +17,7 @@ func _ready():
 func _process(delta):
 	
 
-	if life < 10 and life > 1:
+	if life < 10:
 		ani.play("on")
 	
 	if life == 0:
@@ -33,6 +33,7 @@ func take_life():
 	life -= 1
 	$brick_life.text = str(life)
 	if life == 0:
+		$brick_life.text = "  "
 		pass
 		#destroy()#destroy all the adjasent blocks 
 		
