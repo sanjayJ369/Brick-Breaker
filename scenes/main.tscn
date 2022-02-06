@@ -167,6 +167,7 @@ target_node = NodePath("../../bricks/bomb")
 script = ExtResource( 8 )
 source_tilemap = NodePath("../../tilemaps/sand")
 mapping = "res://json addons/sand_tile_spawnner.json"
+spawn_at_runtime = true
 target_node = NodePath("../../bricks/sand")
 
 [editable path="StaticBody2D"]

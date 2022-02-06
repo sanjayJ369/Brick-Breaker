@@ -3,10 +3,10 @@
 		"scene":"res://scenes/bricks/sand bricks/bc.tscn"
 	},
 	"B_R":{
-		"scene":"res://scenes/bricks/sand bricks/bR.tscn"
+		"scene":"res://scenes/bricks/sand bricks/br.tscn"
 	},
 	"B_L":{
-		"scene":"res://scenes/bricks/sand bricks/bL.tscn"
+		"scene":"res://scenes/bricks/sand bricks/bl.tscn"
 	},
 	"M_C":{
 		"scene":"res://scenes/bricks/sand bricks/mc.tscn"

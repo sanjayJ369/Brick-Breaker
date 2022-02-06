@@ -26,4 +26,8 @@
 	"T_L":{
 		"scene":"res://scenes/bricks/sand bricks/tl.tscn"
 	}
+	,
+	"S_B":{
+		"scene":"res://scenes/bricks/sand bricks/sand_block.tscn"
+	}
 }
