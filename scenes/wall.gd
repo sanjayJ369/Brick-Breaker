@@ -167,4 +167,11 @@ func cannon_1():
 
 func _on_golden_bomb_nuclear():
 	
-	$bricks.queue_free()
+	if $bricks != null:
+		$bricks.queue_free()
+
+
+func _on_golden_bomb2_nuclear():
+	
+	if $bricks != null:
+		$bricks.queue_free()
