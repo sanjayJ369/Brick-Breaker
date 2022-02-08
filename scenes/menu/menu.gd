@@ -17,7 +17,8 @@ func _ready():
 
 
 func _on_PlayButton_body_entered(body):
-	switch_scene("hi")
+	pass
+	#switch_scene("hi")
 
 func switch_scene(scene):
 	play_transition()
