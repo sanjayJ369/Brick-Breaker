@@ -1,29 +1,38 @@
-extends Node2D
+extends StaticBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
+export var brick_life = 15
+var life 
+var value = 100
+onready var bar = $ProgressBar
+export(bool) var exit_bar = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_PlayButton_body_entered(body):
-	pass
-	#switch_scene("hi")
+	
+	life = brick_life
+	bar.value = value
+	
+func _process(delta):
+	
+	bar.value = round((float(life)/brick_life)*100)
+	
+	
+func take_life():
+	
+	life -= 1
+	if life == 0:
+		switch_scene("hi")
+		
 
 func switch_scene(scene):
-	play_transition()
-	get_tree().change_scene("res://scenes/main.tscn")
+	
+	if exit_bar == false:
+		play_transition()
+		get_tree().change_scene("res://scenes/main.tscn")
 		
+	elif exit_bar == true:
+		get_tree().quit()
+
+	
 func play_transition():
-	# TODO
-	pass
+	pass#TO DO

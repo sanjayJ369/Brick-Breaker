@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -8,24 +8,52 @@
 [ext_resource path="res://ui_elements/custom/ninepatch.png" type="Texture" id=6]
 [ext_resource path="res://ui_elements/custom/font_1.png" type="Texture" id=7]
 [ext_resource path="res://ui_elements/Menu/Buttons/Play.png" type="Texture" id=8]
-[ext_resource path="res://scenes/menu/menu.gd" type="Script" id=9]
+[ext_resource path="res://ui_elements/Wood and Paper UI/Sprites/Life Bars/Big Bars/2.png" type="Texture" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://ui_elements/Wood and Paper UI/Sprites/Life Bars/Big Bars/1.png" type="Texture" id=13]
 [ext_resource path="res://ui_elements/Wood and Paper UI/Sprites/Life Bars/Big Bars/3.png" type="Texture" id=14]
 [ext_resource path="res://ui_elements/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" type="Texture" id=15]
-[ext_resource path="res://scenes/menu/PlayButton.gd" type="Script" id=16]
+[ext_resource path="res://scenes/menu/menu.gd" type="Script" id=16]
 [ext_resource path="res://scenes/menu/progress_bar/progress_bar.tres" type="Theme" id=17]
+[ext_resource path="res://ui_elements/Menu/Buttons/Close.png" type="Texture" id=18]
+[ext_resource path="res://scenes/menu/progress_bar/exit_button_progressbar.tres" type="Theme" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 4 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 37.3333, 26.3334 )
+extents = Vector2( 37.3333, 28 )
 
 [sub_resource type="TileSet" id=2]
+0/name = "font_1.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 288, 23 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 10, 10 )
+0/autotile/spacing = 1
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 25, 15.8334 )
+
+[sub_resource type="TileSet" id=5]
 0/name = "font_1.png 0"
 0/texture = ExtResource( 7 )
 0/tex_offset = Vector2( 0, 0 )
@@ -53,6 +81,7 @@ script = ExtResource( 1 )
 balls = -1
 delay = 0.1
 vel_max = 500
+ball_life = 3
 max_bounces = 45
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
@@ -105,18 +134,17 @@ position = Vector2( 0, 8 )
 
 [node name="menu" type="Node2D" parent="."]
 scale = Vector2( 3, 3 )
-script = ExtResource( 9 )
 
-[node name="PlayButton" type="StaticBody2D" parent="menu" groups=["brick"]]
+[node name="start" type="StaticBody2D" parent="menu" groups=["brick"]]
 position = Vector2( 128, 88 )
 collision_layer = 2
 script = ExtResource( 16 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="menu/PlayButton"]
-position = Vector2( 37.3333, 27 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="menu/start"]
+position = Vector2( 37.3333, 28 )
 shape = SubResource( 3 )
 
-[node name="NinePatchRect" type="NinePatchRect" parent="menu/PlayButton"]
+[node name="NinePatchRect" type="NinePatchRect" parent="menu/start"]
 margin_right = 75.0
 margin_bottom = 56.0
 texture = ExtResource( 6 )
@@ -129,30 +157,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TileMap" type="TileMap" parent="menu/PlayButton/NinePatchRect"]
+[node name="TileMap" type="TileMap" parent="menu/start/NinePatchRect"]
 position = Vector2( -16, -2.66666 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 6, 6 )
 format = 1
 tile_data = PoolIntArray( 131077, 0, 15, 131079, 0, 11, 131081, 0, 0, 131083, 0, 24 )
 
-[node name="Play" type="Sprite" parent="menu/PlayButton/NinePatchRect"]
-position = Vector2( 37.3333, 37.3333 )
-texture = ExtResource( 8 )
-
-[node name="Sprite" type="Sprite" parent="menu/PlayButton"]
+[node name="Sprite" type="Sprite" parent="menu/start"]
 position = Vector2( 5.33334, 58.6667 )
 texture = ExtResource( 13 )
 
-[node name="Sprite2" type="Sprite" parent="menu/PlayButton"]
+[node name="Sprite2" type="Sprite" parent="menu/start"]
 position = Vector2( 37.3333, 58.6667 )
 texture = ExtResource( 14 )
 
-[node name="Sprite3" type="Sprite" parent="menu/PlayButton"]
+[node name="Sprite3" type="Sprite" parent="menu/start"]
 position = Vector2( 61.3333, 58.6667 )
 texture = ExtResource( 15 )
 
-[node name="ProgressBar" type="ProgressBar" parent="menu/PlayButton"]
+[node name="ProgressBar" type="ProgressBar" parent="menu/start"]
 anchor_right = 0.009
 margin_left = 6.0
 margin_top = 56.0
@@ -160,6 +184,78 @@ margin_right = 74.0
 margin_bottom = 68.0
 rect_scale = Vector2( 1, 0.27 )
 theme = ExtResource( 17 )
+step = 0.1
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="menu/start"]
+margin_left = 18.6667
+margin_top = 21.3333
+margin_right = 51.6667
+margin_bottom = 49.3333
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="StaticBody2D" parent="menu" groups=["brick"]]
+position = Vector2( 21.3333, 2.66667 )
+collision_layer = 2
+script = ExtResource( 16 )
+brick_life = 30
+exit_bar = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="menu/exit"]
+position = Vector2( 25, 24.1666 )
+shape = SubResource( 4 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="menu/exit"]
+margin_top = 8.0
+margin_right = 50.0
+margin_bottom = 40.0
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 42, 41 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="menu/exit/NinePatchRect"]
+position = Vector2( -16, -2.66666 )
+scale = Vector2( 0.75, 0.75 )
+tile_set = SubResource( 5 )
+cell_size = Vector2( 4, 4 )
+format = 1
+tile_data = PoolIntArray( 131080, 0, 4, 131083, 0, 23, 131086, 0, 8, 131089, 0, 19 )
+
+[node name="Play" type="Sprite" parent="menu/exit/NinePatchRect"]
+position = Vector2( 26, 20 )
+scale = Vector2( 1.25833, 1.125 )
+texture = ExtResource( 18 )
+
+[node name="Sprite" type="Sprite" parent="menu/exit"]
+position = Vector2( 8, 44 )
+texture = ExtResource( 9 )
+
+[node name="Sprite3" type="Sprite" parent="menu/exit"]
+position = Vector2( 36, 44 )
+texture = ExtResource( 15 )
+
+[node name="ProgressBar" type="ProgressBar" parent="menu/exit"]
+anchor_right = 0.009
+margin_left = 9.0
+margin_top = 42.0
+margin_right = 48.0
+margin_bottom = 49.0
+rect_scale = Vector2( 1, 0.27 )
+theme = ExtResource( 19 )
 step = 0.1
 percent_visible = false
 __meta__ = {

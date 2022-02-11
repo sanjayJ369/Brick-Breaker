@@ -20,6 +20,7 @@ var sprites = []
 var colours = [Color("6cd9f1"),Color("a4cc42"),Color("f7ec8a"),Color("f18b72"),Color("f89cc0"),Color("f2bc7e")]
 
 func _ready():
+	
 	randomize()
 
 	line1.global_position = loc - Vector2(radius,0)

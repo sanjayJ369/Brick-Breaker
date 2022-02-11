@@ -43,7 +43,7 @@ func _ready():
 		print("connected")
 	
 	$aimer.cannon_loc = cannon_body.position
-	
+	$aimer.max_bounces = max_bounces + 1
 	cannon_loc = cannon_body.position
 	balls_left = balls
 	randomize()
