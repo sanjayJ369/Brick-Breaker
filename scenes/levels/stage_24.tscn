@@ -1,0 +1,373 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scenes/wall.gd" type="Script" id=1]
+[ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tiles/sand_tiles.tres" type="TileSet" id=3]
+[ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
+[ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
+[ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
+[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
+[ext_resource path="res://scenes/bricks/bricks.gd" type="Script" id=9]
+[ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
+[ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
+[ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/bricks/squares/rocks/rock1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/bricks/squares/gold/gold1.tscn" type="PackedScene" id=14]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 4 )
+
+[node name="stage24" type="Node2D"]
+script = ExtResource( 1 )
+balls = -1
+delay = 0.1
+vel_max = 500
+ball_life = 30
+max_bounces = 45
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+
+[node name="shoot_delay" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="ball" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 720.0
+margin_right = 104.0
+margin_bottom = 789.0
+custom_fonts/font = SubResource( 1 )
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aimer" parent="." instance=ExtResource( 12 )]
+position = Vector2( -64, 464 )
+
+[node name="bricks" type="Node2D" parent="."]
+
+[node name="H_rec" type="Node2D" parent="bricks"]
+position = Vector2( 0, 8 )
+
+[node name="V_rec" type="Node2D" parent="bricks"]
+position = Vector2( 0, 8 )
+
+[node name="triangles" type="Node2D" parent="bricks"]
+
+[node name="squares" type="Node2D" parent="bricks"]
+
+[node name="rock1" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 176, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock2" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 208, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock3" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 240, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock4" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 272, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock5" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 304, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock6" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 336, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock7" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 368, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock8" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 400, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock9" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 432, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock10" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 464, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock11" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 496, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock12" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 528, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock13" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 560, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock14" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 592, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock15" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 624, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock16" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 656, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock17" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 688, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock18" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 720, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock19" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 752, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock20" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 784, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock21" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 816, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock22" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 848, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock23" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 880, 48 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock24" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 144, 80 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock25" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 912, 80 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock26" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 112, 112 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock27" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 944, 112 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock28" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 80, 144 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock29" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 976, 144 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock30" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 80, 176 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock31" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 336, 176 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock32" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 368, 176 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock33" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 688, 176 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock34" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 720, 176 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock35" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 976, 176 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock36" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 80, 208 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock37" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 272, 208 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="rock38" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 13 )]
+position = Vector2( 304, 208 )
+collision_layer = 2
+script = ExtResource( 9 )
+
+[node name="gold1" type="StaticBody2D" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+position = Vector2( 336, 208 )
+collision_layer = 2
+script = ExtResource( 9 )
+brick_life = 100
+
+[node name="bomb" type="Node2D" parent="bricks"]
+
+[node name="sand" type="Node2D" parent="bricks"]
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 494, 713 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 10 )
+offset = Vector2( -2.5, -0.5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 480, 704 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+
+[node name="aim" type="Node2D" parent="."]
+
+[node name="tilemaps" type="Node2D" parent="."]
+
+[node name="square" type="TileMap" parent="tilemaps"]
+mode = 2
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+compatibility_mode = true
+format = 1
+tile_data = PoolIntArray( 65541, 8, 0, 65542, 8, 0, 65543, 8, 0, 65544, 8, 0, 65545, 8, 0, 65546, 8, 0, 65547, 8, 0, 65548, 8, 0, 65549, 8, 0, 65550, 8, 0, 65551, 8, 0, 65552, 8, 0, 65553, 8, 0, 65554, 8, 0, 65555, 8, 0, 65556, 8, 0, 65557, 8, 0, 65558, 8, 0, 65559, 8, 0, 65560, 8, 0, 65561, 8, 0, 65562, 8, 0, 65563, 8, 0, 131076, 8, 0, 131100, 8, 0, 196611, 8, 0, 196637, 8, 0, 262146, 8, 0, 262174, 8, 0, 327682, 8, 0, 327690, 8, 0, 327691, 8, 0, 327701, 8, 0, 327702, 8, 0, 327710, 8, 0, 393218, 8, 0, 393224, 8, 0, 393225, 8, 0, 393226, 4, 0, 393227, 12, 0, 393228, 8, 0, 393229, 8, 0, 393235, 8, 0, 393236, 8, 0, 393237, 12, 0, 393238, 4, 0, 393239, 8, 0, 393240, 8, 0, 393246, 8, 0, 458754, 8, 0, 458763, 4, 0, 458773, 4, 0, 458782, 8, 0, 524290, 8, 0, 524294, 8, 0, 524314, 8, 0, 524318, 8, 0, 589826, 8, 0, 589829, 8, 0, 589830, 4, 0, 589831, 8, 0, 589849, 8, 0, 589850, 4, 0, 589851, 8, 0, 589854, 8, 0, 655362, 8, 0, 655366, 8, 0, 655386, 8, 0, 655390, 8, 0, 720898, 8, 0, 720911, 8, 0, 720912, 4, 0, 720913, 8, 0, 720926, 8, 0, 786434, 8, 0, 786440, 8, 0, 786441, 8, 0, 786442, 8, 0, 786447, 4, 0, 786449, 4, 0, 786454, 8, 0, 786455, 8, 0, 786456, 8, 0, 786462, 8, 0, 851970, 8, 0, 851976, 8, 0, 851977, 12, 0, 851978, 8, 0, 851983, 8, 0, 851984, 4, 0, 851985, 8, 0, 851990, 8, 0, 851991, 12, 0, 851992, 8, 0, 851998, 8, 0, 917506, 8, 0, 917512, 8, 0, 917514, 8, 0, 917526, 8, 0, 917528, 8, 0, 917534, 8, 0, 983042, 8, 0, 983048, 8, 0, 983049, 12, 0, 983050, 8, 0, 983062, 8, 0, 983063, 12, 0, 983064, 8, 0, 983070, 8, 0, 1048578, 8, 0, 1048584, 8, 0, 1048586, 8, 0, 1048598, 8, 0, 1048600, 8, 0, 1048606, 8, 0, 1114114, 8, 0, 1114120, 8, 0, 1114121, 12, 0, 1114122, 8, 0, 1114123, 8, 0, 1114124, 8, 0, 1114125, 8, 0, 1114126, 8, 0, 1114127, 8, 0, 1114128, 8, 0, 1114129, 8, 0, 1114130, 8, 0, 1114131, 8, 0, 1114132, 8, 0, 1114133, 8, 0, 1114134, 8, 0, 1114135, 12, 0, 1114136, 8, 0, 1114142, 8, 0, 1179650, 8, 0, 1179656, 8, 0, 1179658, 12, 0, 1179660, 12, 0, 1179662, 12, 0, 1179664, 12, 0, 1179666, 12, 0, 1179668, 12, 0, 1179670, 12, 0, 1179672, 8, 0, 1179678, 8, 0, 1245186, 8, 0, 1245192, 8, 0, 1245193, 8, 0, 1245194, 8, 0, 1245195, 8, 0, 1245196, 8, 0, 1245197, 8, 0, 1245198, 8, 0, 1245199, 8, 0, 1245200, 8, 0, 1245201, 8, 0, 1245202, 8, 0, 1245203, 8, 0, 1245204, 8, 0, 1245205, 8, 0, 1245206, 8, 0, 1245207, 8, 0, 1245208, 8, 0, 1245214, 8, 0, 1310722, 8, 0, 1310750, 8, 0, 1376259, 8, 0, 1376285, 8, 0, 1441796, 8, 0, 1441797, 8, 0, 1441798, 8, 0, 1441799, 8, 0, 1441800, 8, 0, 1441801, 8, 0, 1441802, 8, 0, 1441803, 8, 0, 1441804, 8, 0, 1441805, 8, 0, 1441809, 8, 0, 1441810, 8, 0, 1441811, 8, 0, 1441812, 8, 0, 1441813, 8, 0, 1441814, 8, 0, 1441815, 8, 0, 1441816, 8, 0, 1441817, 8, 0, 1441818, 8, 0, 1441819, 8, 0, 1441820, 8, 0 )
+
+[node name="H_rect" type="TileMap" parent="tilemaps"]
+mode = 2
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 96, 32 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 96, 0, 0, 32, 0, 0 )
+compatibility_mode = true
+format = 1
+
+[node name="V_rect" type="TileMap" parent="tilemaps"]
+mode = 2
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 32, 96 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 32, 0, 0, 96, 0, 0 )
+compatibility_mode = true
+format = 1
+
+[node name="triangles" type="TileMap" parent="tilemaps"]
+mode = 2
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 48, 48 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 48, 0, 0, 48, 0, 0 )
+compatibility_mode = true
+format = 1
+
+[node name="bomb" type="TileMap" parent="tilemaps"]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+centered_textures = true
+format = 1
+
+[node name="sand" type="TileMap" parent="tilemaps"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+
+[node name="tile_spawner" type="Node2D" parent="."]
+
+[node name="squares" type="Node2D" parent="tile_spawner"]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../../tilemaps/square")
+mapping = "res://json addons/objects2.json"
+target_node = NodePath("../../bricks/squares")
+
+[node name="triangles" type="Node2D" parent="tile_spawner"]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../../tilemaps/triangles")
+mapping = "res://json addons/objects2.json"
+target_node = NodePath("../../bricks/triangles")
+
+[node name="H_rec" type="Node2D" parent="tile_spawner"]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../../tilemaps/H_rect")
+mapping = "res://json addons/objects2.json"
+target_node = NodePath("../../bricks/H_rec")
+
+[node name="V_rec" type="Node2D" parent="tile_spawner"]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../../tilemaps/V_rect")
+mapping = "res://json addons/objects2.json"
+target_node = NodePath("../../bricks/V_rec")
+
+[node name="bomb" type="Node2D" parent="tile_spawner"]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../../tilemaps/bomb")
+mapping = "res://json addons/bomb_tile.json"
+target_node = NodePath("../../bricks/bomb")
+
+[node name="sand" type="Node2D" parent="tile_spawner"]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../../tilemaps/sand")
+mapping = "res://json addons/sand_tile_spawnner.json"
+spawn_at_runtime = true
+target_node = NodePath("../../bricks/sand")
+
+[editable path="StaticBody2D"]
