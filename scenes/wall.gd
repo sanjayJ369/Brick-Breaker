@@ -30,13 +30,16 @@ preload("res://back_grounds/background_scenes/wood_background.tscn")]
 var backgrounds = [preload("res://back_grounds/Background/blue.tscn"),preload("res://back_grounds/Background/brown.tscn"),
 preload("res://back_grounds/Background/gray.tscn"),preload("res://back_grounds/Background/green.tscn"),preload("res://back_grounds/Background/pink.tscn"),
 preload("res://back_grounds/Background/purple.tscn"),preload("res://back_grounds/Background/yellow.tscn")]
-
+var brick_count = 10
 
 
 var start_bricks = Vector2(50,36)
 onready var golden_brick = get_node("golden_brick")
 
 func _ready():
+	
+	for i in $bricks.get_children():
+		brick_count += i.get_child_count()
 	
 	if bomb != null:
 		bomb.connect("nuclear",self,"_on_golden_bomb_nuclear")
@@ -52,7 +55,9 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-
+	
+	
+	
 	$Sprite.position = cannon_1()
 	cannon_body.rotate((crota-rota))
 	crota = rota
@@ -175,3 +180,13 @@ func _on_golden_bomb2_nuclear():
 	
 	if $bricks != null:
 		$bricks.queue_free()
+
+
+func set_bricks_value():
+	
+	var num = 0
+	
+	for i in $bricks.get_children():
+		num += i.get_child_count()
+		
+	return num

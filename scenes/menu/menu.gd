@@ -28,7 +28,7 @@ func switch_scene(scene):
 	
 	if exit_bar == false:
 		play_transition()
-		get_tree().change_scene("res://scenes/main.tscn")
+		get_tree().change_scene(scene)
 		
 	elif exit_bar == true:
 		get_tree().quit()
@@ -36,3 +36,11 @@ func switch_scene(scene):
 	
 func play_transition():
 	pass#TO DO
+
+
+func _on_Button_pressed():
+	switch_scene("res://scenes/menu/level_select_screen.tscn")
+
+
+func _on_Button2_pressed():
+	get_tree().quit()

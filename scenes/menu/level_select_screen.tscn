@@ -1,0 +1,140 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/wall.gd" type="Script" id=1]
+[ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tiles/new_tiles_test.tres" type="TileSet" id=3]
+[ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
+[ext_resource path="res://scenes/menu/ui.gd" type="Script" id=6]
+[ext_resource path="res://ui_elements/Menu/Buttons/Previous_pressed.png" type="Texture" id=7]
+[ext_resource path="res://ui_elements/Menu/Buttons/Previous.png" type="Texture" id=8]
+[ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
+[ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
+[ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+
+[sub_resource type="Theme" id=6]
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6, 6 )
+
+[node name="control" type="Node2D"]
+script = ExtResource( 1 )
+balls = -1
+delay = 0.1
+vel_max = 500
+ball_life = 6
+max_bounces = 9
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
+
+[node name="shoot_delay" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="TileMap" type="TileMap" parent="."]
+mode = 2
+tile_set = ExtResource( 3 )
+compatibility_mode = true
+format = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+
+[node name="ball" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 720.0
+margin_right = 104.0
+margin_bottom = 789.0
+custom_fonts/font = SubResource( 1 )
+text = "0
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aimer" parent="." instance=ExtResource( 12 )]
+position = Vector2( -64, 464 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 494, 713 )
+rotation = 1.5708
+scale = Vector2( 3, 3 )
+texture = ExtResource( 10 )
+offset = Vector2( -2.5, -0.5 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 480, 704 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+
+[node name="bricks" type="Node2D" parent="."]
+position = Vector2( 0, 8 )
+
+[node name="aim" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 38.0
+margin_bottom = 38.0
+rect_scale = Vector2( 4, 4 )
+theme = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Control/Button" groups=["brick"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Button/StaticBody2D"]
+position = Vector2( 7, 7 )
+shape = SubResource( 7 )
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+anchor_left = 0.6
+anchor_top = 0.607
+anchor_right = 0.626
+anchor_bottom = 0.607
+margin_left = 72.0
+margin_top = 111.72
+margin_right = 112.0
+margin_bottom = 151.72
+rect_scale = Vector2( 4, 4 )
+columns = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
+
+[editable path="StaticBody2D"]
