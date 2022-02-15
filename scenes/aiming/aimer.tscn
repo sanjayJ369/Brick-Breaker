@@ -5,7 +5,7 @@
 [node name="aimer" type="Node2D"]
 script = ExtResource( 1 )
 loc = Vector2( 494, 713 )
-max_bounces = 10
+aim_length = 10
 intervel = 10
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

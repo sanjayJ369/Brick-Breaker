@@ -26,11 +26,11 @@ font_data = ExtResource( 4 )
 
 [node name="stage25" type="Node2D"]
 script = ExtResource( 1 )
-balls = -1
+balls = 35
 delay = 0.1
 vel_max = 500
 ball_life = 30
-max_bounces = 45
+max_bounces = 10
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
@@ -56,8 +56,7 @@ __meta__ = {
 
 [node name="aimer" parent="." instance=ExtResource( 12 )]
 position = Vector2( -64, 464 )
-max_bounces = 5
-aim_length = 10
+aim_length = 2
 
 [node name="bricks" type="Node2D" parent="."]
 
@@ -73,57 +72,75 @@ position = Vector2( 0, 8 )
 
 [node name="wood1" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 80 )
+brick_life = 5
 
 [node name="wood2" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 112 )
+brick_life = 5
 
 [node name="wood3" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 144 )
+brick_life = 5
 
 [node name="wood4" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 176 )
+brick_life = 5
 
 [node name="wood5" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 208 )
+brick_life = 5
 
 [node name="wood6" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 240 )
+brick_life = 5
 
 [node name="wood7" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 272 )
+brick_life = 5
 
 [node name="wood8" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 304 )
+brick_life = 5
 
 [node name="wood9" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 336 )
+brick_life = 5
 
 [node name="wood10" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 368 )
+brick_life = 5
 
 [node name="wood11" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 400 )
+brick_life = 5
 
 [node name="wood12" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 432 )
+brick_life = 5
 
 [node name="wood13" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 464 )
+brick_life = 5
 
 [node name="wood14" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 496 )
+brick_life = 5
 
 [node name="wood15" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 528 )
+brick_life = 5
 
 [node name="wood16" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 560 )
+brick_life = 5
 
 [node name="wood17" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 592 )
+brick_life = 5
 
 [node name="wood18" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 624, 624 )
+brick_life = 5
 
 [node name="bomb" type="Node2D" parent="bricks"]
 

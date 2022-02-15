@@ -16,7 +16,7 @@
 size = 32
 font_data = ExtResource( 4 )
 
-[node name="control" type="Node2D"]
+[node name="stage28" type="Node2D"]
 script = ExtResource( 1 )
 balls = -1
 delay = 0.1
