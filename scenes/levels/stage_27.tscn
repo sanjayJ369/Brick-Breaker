@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -8,14 +8,12 @@
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
 [ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
-[ext_resource path="res://scenes/menu/audio.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/bricks/squares/gold/gold1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/bricks/squares/wood/wood1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/bricks/bombs/golden_bomb.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -27,7 +25,7 @@ balls = -1
 delay = 0.1
 vel_max = 500
 ball_life = 30
-max_bounces = 10
+max_bounces = 4
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
@@ -354,9 +352,5 @@ target_node = NodePath("../../bricks/sand")
 [node name="golden_bomb" parent="." instance=ExtResource( 15 )]
 position = Vector2( 498, 223 )
 brick_life = 30
-
-[node name="AudioStreamPlayer" parent="." instance=ExtResource( 9 )]
-
-[node name="GUI" parent="." instance=ExtResource( 16 )]
 
 [editable path="StaticBody2D"]
