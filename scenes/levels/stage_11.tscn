@@ -1,27 +1,32 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tiles/sand_tiles.tres" type="TileSet" id=3]
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
 [ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
+[ext_resource path="res://scenes/bricks/squares/wood/wood1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/bricks/rectangle/rock_rec1.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/bricks/bombs/bomb.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/bricks/bombs/golden_bomb.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/bricks/squares/rocks/rock1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/bricks/sand bricks/ml.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/bricks/bombs/golden_bomb.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/bricks/sand bricks/tc.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/bricks/sand bricks/mr.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/bricks/sand bricks/mc.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/bricks/sand bricks/tr.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/bricks/sand bricks/tl.tscn" type="PackedScene" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 4 )
 
-[node name="stage11" type="Node2D"]
+[node name="stage25" type="Node2D"]
 script = ExtResource( 1 )
-balls = 80
+balls = 35
 delay = 0.1
 vel_max = 500
 ball_life = 30
@@ -51,6 +56,7 @@ __meta__ = {
 
 [node name="aimer" parent="." instance=ExtResource( 12 )]
 position = Vector2( -64, 464 )
+aim_length = 2
 
 [node name="bricks" type="Node2D" parent="."]
 
@@ -60,176 +66,541 @@ position = Vector2( 0, 8 )
 [node name="V_rec" type="Node2D" parent="bricks"]
 position = Vector2( 0, 8 )
 
-[node name="rock_rec1" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 240, 232 )
-
-[node name="rock_rec2" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 272, 232 )
-
-[node name="rock_rec3" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 304, 232 )
-
-[node name="rock_rec4" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 688, 232 )
-
-[node name="rock_rec5" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 720, 232 )
-
-[node name="rock_rec6" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 752, 232 )
-
-[node name="rock_rec7" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 240, 328 )
-
-[node name="rock_rec8" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 272, 328 )
-
-[node name="rock_rec9" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 304, 328 )
-
-[node name="rock_rec10" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 688, 328 )
-
-[node name="rock_rec11" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 720, 328 )
-
-[node name="rock_rec12" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 752, 328 )
-
-[node name="rock_rec13" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 272, 424 )
-
-[node name="rock_rec14" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 304, 424 )
-
-[node name="rock_rec15" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 688, 424 )
-
-[node name="rock_rec16" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 720, 424 )
-
-[node name="rock_rec17" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 240, 520 )
-
-[node name="rock_rec18" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 272, 520 )
-
-[node name="rock_rec19" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 304, 520 )
-
-[node name="rock_rec20" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 688, 520 )
-
-[node name="rock_rec21" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 720, 520 )
-
-[node name="rock_rec22" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 752, 520 )
-
-[node name="rock_rec23" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 240, 616 )
-
-[node name="rock_rec24" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 272, 616 )
-
-[node name="rock_rec25" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 304, 616 )
-
-[node name="rock_rec26" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 688, 616 )
-
-[node name="rock_rec27" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 720, 616 )
-
-[node name="rock_rec28" parent="bricks/V_rec" instance=ExtResource( 14 )]
-position = Vector2( 752, 616 )
-
 [node name="triangles" type="Node2D" parent="bricks"]
 
 [node name="squares" type="Node2D" parent="bricks"]
 
-[node name="rock1" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 464, 432 )
+[node name="wood1" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 80 )
+brick_life = 5
 
-[node name="rock2" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 496, 432 )
+[node name="wood2" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 112 )
+brick_life = 5
 
-[node name="rock3" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 528, 432 )
+[node name="wood3" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 144 )
+brick_life = 5
 
-[node name="rock4" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 432, 464 )
+[node name="wood4" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 176 )
+brick_life = 5
 
-[node name="rock5" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 464, 464 )
+[node name="wood5" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 208 )
+brick_life = 5
 
-[node name="rock6" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 496, 464 )
+[node name="wood6" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 240 )
+brick_life = 5
 
-[node name="rock7" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 528, 464 )
+[node name="wood7" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 272 )
+brick_life = 5
 
-[node name="rock8" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 560, 464 )
+[node name="wood8" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 304 )
+brick_life = 5
 
-[node name="rock9" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 336, 496 )
+[node name="wood9" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 336 )
+brick_life = 5
 
-[node name="rock10" parent="bricks/squares" instance=ExtResource( 17 )]
+[node name="wood10" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 368 )
+brick_life = 5
+
+[node name="wood11" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 400 )
+brick_life = 5
+
+[node name="wood12" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 432 )
+brick_life = 5
+
+[node name="wood13" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 464 )
+brick_life = 5
+
+[node name="wood14" parent="bricks/squares" instance=ExtResource( 9 )]
 position = Vector2( 368, 496 )
+brick_life = 5
 
-[node name="rock11" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 400, 496 )
+[node name="wood15" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 368, 528 )
+brick_life = 5
 
-[node name="rock13" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 464, 496 )
+[node name="wood16" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 560 )
+brick_life = 5
 
-[node name="rock14" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 528, 496 )
+[node name="wood17" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 592 )
+brick_life = 5
 
-[node name="rock16" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 592, 496 )
-
-[node name="rock17" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 624, 496 )
-
-[node name="rock18" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 656, 496 )
-
-[node name="rock19" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 432, 528 )
-
-[node name="rock20" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 464, 528 )
-
-[node name="rock21" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 496, 528 )
-
-[node name="rock22" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 528, 528 )
-
-[node name="rock23" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 560, 528 )
-
-[node name="rock24" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 464, 560 )
-brick_life = 60
-
-[node name="rock25" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 496, 560 )
-brick_life = 60
-
-[node name="rock26" parent="bricks/squares" instance=ExtResource( 17 )]
-position = Vector2( 528, 560 )
-brick_life = 60
+[node name="wood18" parent="bricks/squares" instance=ExtResource( 9 )]
+position = Vector2( 624, 624 )
+brick_life = 5
 
 [node name="bomb" type="Node2D" parent="bricks"]
 
-[node name="bomb" parent="bricks/bomb" instance=ExtResource( 15 )]
-position = Vector2( 432, 496 )
+[node name="sand" type="Node2D" parent="bricks"]
 
-[node name="bomb2" parent="bricks/bomb" instance=ExtResource( 15 )]
-position = Vector2( 560, 496 )
+[node name="tr" parent="bricks/sand" instance=ExtResource( 18 )]
+position = Vector2( 24, 24 )
+
+[node name="tl" parent="bricks/sand" instance=ExtResource( 19 )]
+position = Vector2( 1000, 24 )
+
+[node name="middle_right" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 40 )
+
+[node name="middle_left" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 40 )
+
+[node name="middle_right2" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 56 )
+
+[node name="middle_left2" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 56 )
+
+[node name="middle_right3" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 72 )
+
+[node name="middle_left3" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 72 )
+
+[node name="middle_right4" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 88 )
+
+[node name="middle_left4" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 88 )
+
+[node name="middle_right5" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 104 )
+
+[node name="middle_left5" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 104 )
+
+[node name="middle_right6" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 120 )
+
+[node name="middle_left6" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 120 )
+
+[node name="middle_right7" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 136 )
+
+[node name="middle_left7" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 136 )
+
+[node name="middle_right8" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 152 )
+
+[node name="middle_left8" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 152 )
+
+[node name="middle_right9" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 168 )
+
+[node name="middle_left9" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 168 )
+
+[node name="middle_right10" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 184 )
+
+[node name="middle_left10" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 184 )
+
+[node name="middle_right11" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 200 )
+
+[node name="middle_left11" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 200 )
+
+[node name="middle_right12" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 216 )
+
+[node name="middle_left12" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 216 )
+
+[node name="middle_right13" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 232 )
+
+[node name="middle_left13" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 232 )
+
+[node name="middle_right14" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 248 )
+
+[node name="middle_left14" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 248 )
+
+[node name="middle_right15" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 264 )
+
+[node name="middle_left15" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 264 )
+
+[node name="middle_right16" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 280 )
+
+[node name="middle_left16" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 280 )
+
+[node name="middle_right17" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 296 )
+
+[node name="middle_left17" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 296 )
+
+[node name="middle_right18" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 312 )
+
+[node name="middle_left18" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 312 )
+
+[node name="middle_right19" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 328 )
+
+[node name="middle_left19" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 328 )
+
+[node name="middle_right20" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 344 )
+
+[node name="middle_left20" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 344 )
+
+[node name="middle_right21" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 360 )
+
+[node name="middle_left21" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 360 )
+
+[node name="middle_right22" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 376 )
+
+[node name="middle_left22" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 376 )
+
+[node name="middle_right23" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 392 )
+
+[node name="middle_left23" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 392 )
+
+[node name="middle_right24" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 408 )
+
+[node name="middle_left24" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 408 )
+
+[node name="middle_right25" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 424 )
+
+[node name="middle_left25" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 424 )
+
+[node name="middle_right26" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 440 )
+
+[node name="middle_left26" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 440 )
+
+[node name="middle_right27" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 456 )
+
+[node name="middle_left27" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 456 )
+
+[node name="middle_right28" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 472 )
+
+[node name="middle_left28" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 472 )
+
+[node name="middle_right29" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 488 )
+
+[node name="middle_left29" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 488 )
+
+[node name="middle_right30" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 504 )
+
+[node name="middle_left30" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 504 )
+
+[node name="middle_right31" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 520 )
+
+[node name="middle_left31" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 520 )
+
+[node name="middle_right32" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 536 )
+
+[node name="middle_left32" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 536 )
+
+[node name="middle_right33" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 552 )
+
+[node name="middle_left33" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 552 )
+
+[node name="middle_right34" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 568 )
+
+[node name="middle_left34" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 568 )
+
+[node name="middle_right35" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 584 )
+
+[node name="middle_left35" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 584 )
+
+[node name="middle_right36" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 600 )
+
+[node name="middle_left36" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 600 )
+
+[node name="middle_right37" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 616 )
+
+[node name="middle_left37" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 616 )
+
+[node name="middle_right38" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 632 )
+
+[node name="middle_left38" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 632 )
+
+[node name="middle_right39" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 648 )
+
+[node name="middle_left39" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 648 )
+
+[node name="middle_right40" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 664 )
+
+[node name="middle_left40" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 664 )
+
+[node name="middle_right41" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 680 )
+
+[node name="middle_left41" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 680 )
+
+[node name="middle_right42" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 696 )
+
+[node name="middle_left42" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 696 )
+
+[node name="middle_right43" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 712 )
+
+[node name="middle_left43" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 712 )
+
+[node name="middle_right44" parent="bricks/sand" instance=ExtResource( 16 )]
+position = Vector2( 24, 728 )
+
+[node name="middle_left44" parent="bricks/sand" instance=ExtResource( 13 )]
+position = Vector2( 1000, 728 )
+
+[node name="middle_center" parent="bricks/sand" instance=ExtResource( 17 )]
+position = Vector2( 24, 744 )
+
+[node name="t_c" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 40, 744 )
+
+[node name="t_c2" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 56, 744 )
+
+[node name="t_c3" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 72, 744 )
+
+[node name="t_c4" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 88, 744 )
+
+[node name="t_c5" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 104, 744 )
+
+[node name="t_c6" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 120, 744 )
+
+[node name="t_c7" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 136, 744 )
+
+[node name="t_c8" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 152, 744 )
+
+[node name="t_c9" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 168, 744 )
+
+[node name="t_c10" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 184, 744 )
+
+[node name="t_c11" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 200, 744 )
+
+[node name="t_c12" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 216, 744 )
+
+[node name="t_c13" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 232, 744 )
+
+[node name="t_c14" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 248, 744 )
+
+[node name="t_c15" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 264, 744 )
+
+[node name="t_c16" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 280, 744 )
+
+[node name="t_c17" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 296, 744 )
+
+[node name="t_c18" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 312, 744 )
+
+[node name="t_c19" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 328, 744 )
+
+[node name="t_c20" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 344, 744 )
+
+[node name="t_c21" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 360, 744 )
+
+[node name="t_c22" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 376, 744 )
+
+[node name="t_c23" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 392, 744 )
+
+[node name="t_c24" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 408, 744 )
+
+[node name="t_c25" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 424, 744 )
+
+[node name="t_c26" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 440, 744 )
+
+[node name="t_c27" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 456, 744 )
+
+[node name="t_c28" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 472, 744 )
+
+[node name="t_c29" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 488, 744 )
+
+[node name="t_c30" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 504, 744 )
+
+[node name="t_c31" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 520, 744 )
+
+[node name="t_c32" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 536, 744 )
+
+[node name="t_c33" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 552, 744 )
+
+[node name="t_c34" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 568, 744 )
+
+[node name="t_c35" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 584, 744 )
+
+[node name="t_c36" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 600, 744 )
+
+[node name="t_c37" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 616, 744 )
+
+[node name="t_c38" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 632, 744 )
+
+[node name="t_c39" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 648, 744 )
+
+[node name="t_c40" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 664, 744 )
+
+[node name="t_c41" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 680, 744 )
+
+[node name="t_c42" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 696, 744 )
+
+[node name="t_c43" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 712, 744 )
+
+[node name="t_c44" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 728, 744 )
+
+[node name="t_c45" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 744, 744 )
+
+[node name="t_c46" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 760, 744 )
+
+[node name="t_c47" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 776, 744 )
+
+[node name="t_c48" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 792, 744 )
+
+[node name="t_c49" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 808, 744 )
+
+[node name="t_c50" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 824, 744 )
+
+[node name="t_c51" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 840, 744 )
+
+[node name="t_c52" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 856, 744 )
+
+[node name="t_c53" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 872, 744 )
+
+[node name="t_c54" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 888, 744 )
+
+[node name="t_c55" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 904, 744 )
+
+[node name="t_c56" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 920, 744 )
+
+[node name="t_c57" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 936, 744 )
+
+[node name="t_c58" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 952, 744 )
+
+[node name="t_c59" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 968, 744 )
+
+[node name="t_c60" parent="bricks/sand" instance=ExtResource( 15 )]
+position = Vector2( 984, 744 )
+
+[node name="middle_center2" parent="bricks/sand" instance=ExtResource( 17 )]
+position = Vector2( 1000, 744 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 494, 713 )
@@ -255,7 +626,7 @@ cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 compatibility_mode = true
 format = 1
-tile_data = PoolIntArray( 851982, 8, 0, 851983, 8, 0, 851984, 8, 0, 917517, 8, 0, 917518, 8, 0, 917519, 8, 0, 917520, 8, 0, 917521, 8, 0, 983050, 8, 0, 983051, 8, 0, 983052, 8, 0, 983054, 8, 0, 983056, 8, 0, 983058, 8, 0, 983059, 8, 0, 983060, 8, 0, 1048589, 8, 0, 1048590, 8, 0, 1048591, 8, 0, 1048592, 8, 0, 1048593, 8, 0, 1114126, 8, 0, 1114127, 8, 0, 1114128, 8, 0 )
+tile_data = PoolIntArray( 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327699, 0, 0, 393235, 0, 0, 458771, 0, 0, 524299, 0, 0, 589835, 0, 0, 655371, 0, 0, 720915, 0, 0, 786451, 0, 0, 851987, 0, 0, 917515, 0, 0, 983051, 0, 0, 1048587, 0, 0, 1114131, 0, 0, 1179667, 0, 0, 1245203, 0, 0 )
 
 [node name="H_rect" type="TileMap" parent="tilemaps"]
 mode = 2
@@ -274,7 +645,6 @@ cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 32, 0, 0, 96, 0, 0 )
 compatibility_mode = true
 format = 1
-tile_data = PoolIntArray( 131079, 11, 0, 131080, 11, 0, 131081, 11, 0, 131093, 11, 0, 131094, 11, 0, 131095, 11, 0, 196615, 11, 0, 196616, 11, 0, 196617, 11, 0, 196629, 11, 0, 196630, 11, 0, 196631, 11, 0, 262152, 11, 0, 262153, 11, 0, 262165, 11, 0, 262166, 11, 0, 327687, 11, 0, 327688, 11, 0, 327689, 11, 0, 327701, 11, 0, 327702, 11, 0, 327703, 11, 0, 393223, 11, 0, 393224, 11, 0, 393225, 11, 0, 393237, 11, 0, 393238, 11, 0, 393239, 11, 0 )
 
 [node name="triangles" type="TileMap" parent="tilemaps"]
 mode = 2
@@ -292,7 +662,13 @@ cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( 983053, 0, 0, 983057, 0, 0 )
+
+[node name="sand" type="TileMap" parent="tilemaps"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 65537, 1, 0, 65598, 0, 0, 131073, 8, 0, 131134, 6, 0, 196609, 8, 0, 196670, 6, 0, 262145, 8, 0, 262206, 6, 0, 327681, 8, 0, 327742, 6, 0, 393217, 8, 0, 393278, 6, 0, 458753, 8, 0, 458814, 6, 0, 524289, 8, 0, 524350, 6, 0, 589825, 8, 0, 589886, 6, 0, 655361, 8, 0, 655422, 6, 0, 720897, 8, 0, 720958, 6, 0, 786433, 8, 0, 786494, 6, 0, 851969, 8, 0, 852030, 6, 0, 917505, 8, 0, 917566, 6, 0, 983041, 8, 0, 983102, 6, 0, 1048577, 8, 0, 1048638, 6, 0, 1114113, 8, 0, 1114174, 6, 0, 1179649, 8, 0, 1179710, 6, 0, 1245185, 8, 0, 1245246, 6, 0, 1310721, 8, 0, 1310782, 6, 0, 1376257, 8, 0, 1376286, 0, 0, 1376287, 1, 0, 1376318, 6, 0, 1441793, 8, 0, 1441822, 3, 0, 1441823, 4, 0, 1441854, 6, 0, 1507329, 8, 0, 1507390, 6, 0, 1572865, 8, 0, 1572926, 6, 0, 1638401, 8, 0, 1638462, 6, 0, 1703937, 8, 0, 1703998, 6, 0, 1769473, 8, 0, 1769534, 6, 0, 1835009, 8, 0, 1835070, 6, 0, 1900545, 8, 0, 1900606, 6, 0, 1966081, 8, 0, 1966142, 6, 0, 2031617, 8, 0, 2031678, 6, 0, 2097153, 8, 0, 2097214, 6, 0, 2162689, 8, 0, 2162718, 0, 0, 2162719, 1, 0, 2162750, 6, 0, 2228225, 8, 0, 2228254, 3, 0, 2228255, 4, 0, 2228286, 6, 0, 2293761, 8, 0, 2293822, 6, 0, 2359297, 8, 0, 2359358, 6, 0, 2424833, 8, 0, 2424894, 6, 0, 2490369, 8, 0, 2490430, 6, 0, 2555905, 8, 0, 2555966, 6, 0, 2621441, 8, 0, 2621502, 6, 0, 2686977, 8, 0, 2687038, 6, 0, 2752513, 8, 0, 2752574, 6, 0, 2818049, 8, 0, 2818110, 6, 0, 2883585, 8, 0, 2883646, 6, 0, 2949121, 8, 0, 2949182, 6, 0, 3014657, 7, 0, 3014658, 2, 0, 3014659, 2, 0, 3014660, 2, 0, 3014661, 2, 0, 3014662, 2, 0, 3014663, 2, 0, 3014664, 2, 0, 3014665, 2, 0, 3014666, 2, 0, 3014667, 2, 0, 3014668, 2, 0, 3014669, 2, 0, 3014670, 2, 0, 3014671, 2, 0, 3014672, 2, 0, 3014673, 2, 0, 3014674, 2, 0, 3014675, 2, 0, 3014676, 2, 0, 3014677, 2, 0, 3014678, 2, 0, 3014679, 2, 0, 3014680, 2, 0, 3014681, 2, 0, 3014682, 2, 0, 3014683, 2, 0, 3014684, 2, 0, 3014685, 2, 0, 3014686, 2, 0, 3014687, 2, 0, 3014688, 2, 0, 3014689, 2, 0, 3014690, 2, 0, 3014691, 2, 0, 3014692, 2, 0, 3014693, 2, 0, 3014694, 2, 0, 3014695, 2, 0, 3014696, 2, 0, 3014697, 2, 0, 3014698, 2, 0, 3014699, 2, 0, 3014700, 2, 0, 3014701, 2, 0, 3014702, 2, 0, 3014703, 2, 0, 3014704, 2, 0, 3014705, 2, 0, 3014706, 2, 0, 3014707, 2, 0, 3014708, 2, 0, 3014709, 2, 0, 3014710, 2, 0, 3014711, 2, 0, 3014712, 2, 0, 3014713, 2, 0, 3014714, 2, 0, 3014715, 2, 0, 3014716, 2, 0, 3014717, 2, 0, 3014718, 7, 0 )
 
 [node name="tile_spawner" type="Node2D" parent="."]
 
@@ -326,7 +702,15 @@ source_tilemap = NodePath("../../tilemaps/bomb")
 mapping = "res://json addons/bomb_tile.json"
 target_node = NodePath("../../bricks/bomb")
 
-[node name="golden_bomb" parent="." instance=ExtResource( 16 )]
-position = Vector2( 496, 496 )
+[node name="sand" type="Node2D" parent="tile_spawner"]
+script = ExtResource( 8 )
+source_tilemap = NodePath("../../tilemaps/sand")
+mapping = "res://json addons/sand_tile_spawnner.json"
+spawn_at_runtime = true
+target_node = NodePath("../../bricks/sand")
+
+[node name="golden_bomb" parent="." instance=ExtResource( 14 )]
+position = Vector2( 499, 225 )
+brick_life = 30
 
 [editable path="StaticBody2D"]
