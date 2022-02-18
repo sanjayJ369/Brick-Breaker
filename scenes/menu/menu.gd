@@ -21,7 +21,7 @@ func take_life():
 	
 	life -= 1
 	if life == 0:
-		switch_scene("hi")
+		switch_scene("res://scenes/menu/level_select_screen.tscn")
 		
 
 func switch_scene(scene):
@@ -44,3 +44,4 @@ func _on_Button_pressed():
 
 func _on_Button2_pressed():
 	get_tree().quit()
+

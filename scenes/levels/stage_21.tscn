@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
 [ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
+[ext_resource path="res://scenes/menu/audio.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
@@ -16,6 +17,7 @@
 [ext_resource path="res://scenes/bricks/bombs/golden_bomb.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/bricks/squares/rocks/rock1.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scenes/bricks/squares/wood/wood1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/bricks/rectangle/rock_rec1.tscn" type="PackedScene" id=20]
 [ext_resource path="res://scenes/bricks/rectangle/gold_rec1.tscn" type="PackedScene" id=21]
 [ext_resource path="res://scenes/bricks/sand bricks/br.tscn" type="PackedScene" id=23]
@@ -810,4 +812,15 @@ target_node = NodePath("../../bricks/sand")
 [node name="golden_bomb" parent="." instance=ExtResource( 15 )]
 position = Vector2( 494, 145 )
 
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 9 )]
+
+[node name="GUI" parent="." instance=ExtResource( 18 )]
+
+[node name="Button" parent="GUI" index="1"]
+margin_left = 960.0
+margin_top = 24.0
+margin_right = 1000.0
+margin_bottom = 64.0
+
 [editable path="StaticBody2D"]
+[editable path="GUI"]

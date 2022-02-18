@@ -22,7 +22,7 @@ var crota = (PI/2)
 export var loc = Vector2(512,700)
 export var max_bounces = 60
 
-onready var bomb = get_node("golden_bomb")###################
+var bomb = null###################
 
 var edge_backgrounds = [preload("res://back_grounds/background_scenes/leaf_background.tscn"),preload("res://back_grounds/background_scenes/rock_background.tscn"),
 preload("res://back_grounds/background_scenes/wood_background.tscn")]
@@ -31,12 +31,22 @@ var backgrounds = [preload("res://back_grounds/Background/blue.tscn"),preload("r
 preload("res://back_grounds/Background/gray.tscn"),preload("res://back_grounds/Background/green.tscn"),preload("res://back_grounds/Background/pink.tscn"),
 preload("res://back_grounds/Background/purple.tscn"),preload("res://back_grounds/Background/yellow.tscn")]
 var brick_count = 10
+var sounds = [preload("res://sounds/selected sounds for brick breaker game/backgound2.ogg"),preload("res://sounds/selected sounds for brick breaker game/background1.mp3")
+,preload("res://sounds/selected sounds for brick breaker game/background3.mp3")]
+var volume = -24
 
+var current_level
+export(bool) var menu
 
 var start_bricks = Vector2(50,36)
-onready var golden_brick = get_node("golden_brick")
+var golden_brick = null
 
 func _ready():
+	if has_node("golden_brick") == true:
+		golden_brick = get_node("golden_brick")
+	if has_node("golden_bomb") == true:
+		bomb = get_node("golden_bomb")
+	current_level = Global.current_level
 	
 	for i in $bricks.get_children():
 		brick_count += i.get_child_count()
@@ -57,6 +67,11 @@ func _ready():
 func _process(delta):
 	
 	
+	if set_bricks_value() == 0 and menu == false:
+		Global.levels_unlocked = Global.current_level + 1
+		
+		play_transition()
+		switch_sceen()
 	
 	$Sprite.position = cannon_1()
 	cannon_body.rotate((crota-rota))
@@ -119,10 +134,15 @@ func create_field():
 	
 func create_background():
 	
+	var num1 = randi() % sounds.size()
 	var num = randi() % backgrounds.size()
 	var background = backgrounds[num].instance()
 	add_child(background)
-	
+	var music = sounds[num1]
+	if music != null:
+		$AudioStreamPlayer.stream = music
+		$AudioStreamPlayer.play()
+		$AudioStreamPlayer.volume_db = volume 
 	num = randi() % edge_backgrounds.size()
 	var edge = edge_backgrounds[num].instance()
 	add_child(edge)
@@ -186,7 +206,19 @@ func set_bricks_value():
 	
 	var num = 0
 	
-	for i in $bricks.get_children():
-		num += i.get_child_count()
+	if $bricks != null:
+		for i in $bricks.get_children():
+			num += i.get_child_count()
 		
 	return num
+
+
+func play_transition():
+	pass
+	
+func switch_sceen():
+	get_tree().change_scene("res://scenes/levels/stage_"+str(current_level+1)+".tscn")
+	pass
+
+
+

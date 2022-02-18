@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://scenes/bricks/sand bricks/mc.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/bricks/sand bricks/tr.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/bricks/sand bricks/tl.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/menu/audio.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -712,5 +714,9 @@ target_node = NodePath("../../bricks/sand")
 [node name="golden_bomb" parent="." instance=ExtResource( 14 )]
 position = Vector2( 499, 225 )
 brick_life = 30
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 20 )]
+
+[node name="GUI" parent="." instance=ExtResource( 21 )]
 
 [editable path="StaticBody2D"]

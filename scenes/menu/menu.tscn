@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -18,39 +18,20 @@
 [ext_resource path="res://scenes/menu/menu.gd" type="Script" id=16]
 [ext_resource path="res://scenes/menu/progress_bar/progress_bar.tres" type="Theme" id=17]
 [ext_resource path="res://ui_elements/Menu/Buttons/Close.png" type="Texture" id=18]
-[ext_resource path="res://scenes/menu/progress_bar/exit_button_progressbar.tres" type="Theme" id=19]
+[ext_resource path="res://ui_elements/Menu/Buttons/Settings_pressed.png" type="Texture" id=19]
 [ext_resource path="res://ui_elements/Menu/Buttons/Play_pressed.png" type="Texture" id=20]
 [ext_resource path="res://ui_elements/Menu/Buttons/close_pressed.png" type="Texture" id=21]
+[ext_resource path="res://sounds/selected sounds for brick breaker game/menu.mp3" type="AudioStream" id=22]
+[ext_resource path="res://scenes/menu/volume_settings.gd" type="Script" id=23]
+[ext_resource path="res://ui_elements/Menu/Buttons/Settings.png" type="Texture" id=24]
+[ext_resource path="res://ui_elements/Menu/Buttons/Volume.png" type="Texture" id=25]
+[ext_resource path="res://scenes/menu/volume.tres" type="Theme" id=26]
+[ext_resource path="res://scenes/menu/pause_menu_theme.tres" type="Theme" id=27]
+[ext_resource path="res://scenes/menu/back_button_theme.tres" type="Theme" id=28]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 4 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 25, 15.8334 )
-
-[sub_resource type="TileSet" id=5]
-0/name = "font_1.png 0"
-0/texture = ExtResource( 7 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 288, 23 )
-0/tile_mode = 2
-0/autotile/icon_coordinate = Vector2( 0, 0 )
-0/autotile/tile_size = Vector2( 10, 10 )
-0/autotile/spacing = 1
-0/autotile/occluder_map = [  ]
-0/autotile/navpoly_map = [  ]
-0/autotile/priority_map = [  ]
-0/autotile/z_index_map = [  ]
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 37.3333, 28 )
@@ -122,6 +103,33 @@ Button/styles/hover = SubResource( 6 )
 Button/styles/normal = SubResource( 8 )
 Button/styles/pressed = SubResource( 13 )
 
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 24 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="StyleBoxTexture" id=18]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="StyleBoxTexture" id=19]
+texture = ExtResource( 24 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="StyleBoxTexture" id=20]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 21, 22 )
+
+[sub_resource type="Theme" id=21]
+Button/styles/disabled = SubResource( 16 )
+Button/styles/focus = SubResource( 17 )
+Button/styles/hover = SubResource( 18 )
+Button/styles/normal = SubResource( 19 )
+Button/styles/pressed = SubResource( 20 )
+
 [node name="control" type="Node2D"]
 script = ExtResource( 1 )
 balls = -1
@@ -129,6 +137,7 @@ delay = 0.1
 vel_max = 500
 ball_life = 6
 max_bounces = 9
+menu = true
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
@@ -180,61 +189,6 @@ position = Vector2( 0, 8 )
 
 [node name="menu" type="Node2D" parent="."]
 scale = Vector2( 3, 3 )
-
-[node name="exit" type="StaticBody2D" parent="menu" groups=["brick"]]
-position = Vector2( 21.3333, 2.66667 )
-collision_layer = 2
-script = ExtResource( 16 )
-brick_life = 30
-exit_bar = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="menu/exit"]
-position = Vector2( 25, 24.1666 )
-shape = SubResource( 4 )
-
-[node name="NinePatchRect" type="NinePatchRect" parent="menu/exit"]
-margin_top = 8.0
-margin_right = 50.0
-margin_bottom = 40.0
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 42, 41 )
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TileMap" type="TileMap" parent="menu/exit/NinePatchRect"]
-position = Vector2( -16, -2.66666 )
-scale = Vector2( 0.75, 0.75 )
-tile_set = SubResource( 5 )
-cell_size = Vector2( 4, 4 )
-format = 1
-tile_data = PoolIntArray( 131080, 0, 4, 131083, 0, 23, 131086, 0, 8, 131089, 0, 19 )
-
-[node name="Sprite" type="Sprite" parent="menu/exit"]
-position = Vector2( 8, 44 )
-texture = ExtResource( 9 )
-
-[node name="Sprite3" type="Sprite" parent="menu/exit"]
-position = Vector2( 36, 44 )
-texture = ExtResource( 15 )
-
-[node name="ProgressBar" type="ProgressBar" parent="menu/exit"]
-anchor_right = 0.009
-margin_left = 9.0
-margin_top = 42.0
-margin_right = 48.0
-margin_bottom = 49.0
-rect_scale = Vector2( 1, 0.27 )
-theme = ExtResource( 19 )
-step = 0.1
-percent_visible = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="start" type="StaticBody2D" parent="menu" groups=["brick"]]
 position = Vector2( 128, 88 )
@@ -292,10 +246,10 @@ __meta__ = {
 }
 
 [node name="Button2" type="Button" parent="menu/start"]
-margin_left = -90.6667
-margin_top = -66.6667
-margin_right = -72.6667
-margin_bottom = -46.6667
+margin_left = -114.333
+margin_top = -74.0
+margin_right = -96.3333
+margin_bottom = -54.0
 focus_neighbour_left = NodePath("../Button")
 focus_neighbour_top = NodePath("../Button")
 focus_neighbour_right = NodePath("../Button")
@@ -324,7 +278,114 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 22 )
+volume_db = -24.0
+autoplay = true
+
+[node name="volume" type="CanvasLayer" parent="."]
+pause_mode = 2
+script = ExtResource( 23 )
+levels_gui = false
+
+[node name="Button3" type="Button" parent="volume"]
+margin_left = 937.0
+margin_top = 42.0
+margin_right = 984.0
+margin_bottom = 96.0
+focus_neighbour_left = NodePath("../../menu/start/Button")
+focus_neighbour_top = NodePath("../../menu/start/Button")
+focus_neighbour_right = NodePath("../../menu/start/Button")
+focus_neighbour_bottom = NodePath("../../menu/start/Button")
+focus_next = NodePath("../../menu/start/Button")
+focus_previous = NodePath("../../menu/start/Button")
+theme = SubResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pause_menu" type="Control" parent="volume"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backgound" type="ColorRect" parent="volume/pause_menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.0
+margin_top = 2.0
+margin_right = -3.0
+margin_bottom = 2.0
+color = Color( 1, 1, 1, 0.388235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="volume/pause_menu"]
+
+[node name="3" type="Sprite" parent="volume/pause_menu"]
+position = Vector2( 518, 388 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 14 )
+
+[node name="4" type="Sprite" parent="volume/pause_menu"]
+position = Vector2( 559, 388 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 15 )
+
+[node name="2" type="Sprite" parent="volume/pause_menu"]
+position = Vector2( 423, 388 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="volume/pause_menu"]
+position = Vector2( 390, 385 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 25 )
+
+[node name="CenterContainer" type="CenterContainer" parent="volume/pause_menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="volume/pause_menu/CenterContainer"]
+margin_left = 422.0
+margin_top = 376.0
+margin_right = 602.0
+margin_bottom = 392.0
+rect_min_size = Vector2( 180, 0 )
+custom_constants/separation = 37
+
+[node name="HSlider" type="HSlider" parent="volume/pause_menu/CenterContainer/VBoxContainer"]
+margin_right = 180.0
+margin_bottom = 16.0
+theme = ExtResource( 26 )
+min_value = -30.0
+max_value = 0.0
+
+[node name="Button" type="Button" parent="volume/pause_menu"]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 81.0
+margin_bottom = 81.0
+theme = ExtResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="menu/start/Button2" to="menu/start" method="_on_Button2_pressed"]
 [connection signal="pressed" from="menu/start/Button" to="menu/start" method="_on_Button_pressed"]
+[connection signal="pressed" from="volume/Button3" to="volume" method="_on_Button3_pressed"]
+[connection signal="value_changed" from="volume/pause_menu/CenterContainer/VBoxContainer/HSlider" to="volume" method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="volume/pause_menu/Button" to="volume" method="_on_Button_pressed"]
 
 [editable path="StaticBody2D"]

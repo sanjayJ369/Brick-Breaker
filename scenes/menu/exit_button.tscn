@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/menu/menu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/menu/menu.tres" type="TileSet" id=2]
+[ext_resource path="res://ui_elements/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" type="Texture" id=3]
+[ext_resource path="res://ui_elements/Wood and Paper UI/Sprites/Life Bars/Big Bars/2.png" type="Texture" id=4]
+[ext_resource path="res://ui_elements/custom/ninepatch.png" type="Texture" id=5]
+[ext_resource path="res://scenes/menu/progress_bar/exit_button_progressbar.tres" type="Theme" id=6]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 25, 15.8334 )
+
+[node name="exit" type="StaticBody2D" groups=["brick"]]
+position = Vector2( 21.3333, 2.66667 )
+collision_layer = 2
+script = ExtResource( 1 )
+brick_life = 30
+exit_bar = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 25, 24.1666 )
+shape = SubResource( 4 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_top = 8.0
+margin_right = 50.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 42, 41 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="NinePatchRect"]
+position = Vector2( -16, -2.66666 )
+scale = Vector2( 0.75, 0.75 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 4, 4 )
+format = 1
+tile_data = PoolIntArray( 131080, 0, 4, 131083, 0, 23, 131086, 0, 8, 131089, 0, 19 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 8, 44 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 36, 44 )
+texture = ExtResource( 3 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchor_right = 0.009
+margin_left = 9.0
+margin_top = 42.0
+margin_right = 48.0
+margin_bottom = 49.0
+rect_scale = Vector2( 1, 0.27 )
+theme = ExtResource( 6 )
+step = 0.1
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}

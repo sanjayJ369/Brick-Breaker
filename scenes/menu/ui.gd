@@ -29,6 +29,7 @@ func _ready():
 
 func go_to_level(var level):
 	
+	Global.current_level = level
 	get_tree().change_scene("res://scenes/levels/stage_"+str(level)+".tscn")
 
 
