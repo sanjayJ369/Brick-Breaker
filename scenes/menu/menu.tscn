@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -28,6 +28,8 @@
 [ext_resource path="res://scenes/menu/volume.tres" type="Theme" id=26]
 [ext_resource path="res://scenes/menu/pause_menu_theme.tres" type="Theme" id=27]
 [ext_resource path="res://scenes/menu/back_button_theme.tres" type="Theme" id=28]
+[ext_resource path="res://scenes/menu/Text_theme.tres" type="Theme" id=29]
+[ext_resource path="res://scenes/menu/credits_button.gd" type="Script" id=30]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -133,10 +135,7 @@ Button/styles/pressed = SubResource( 20 )
 [node name="control" type="Node2D"]
 script = ExtResource( 1 )
 balls = -1
-delay = 0.1
-vel_max = 500
-ball_life = 6
-max_bounces = 9
+max_bounces = 10
 menu = true
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
@@ -156,12 +155,26 @@ texture = ExtResource( 5 )
 [node name="ball" type="Node2D" parent="."]
 
 [node name="Label" type="Label" parent="."]
-margin_left = 24.0
-margin_top = 720.0
-margin_right = 104.0
-margin_bottom = 789.0
+margin_left = 456.0
+margin_top = 50.0
+margin_right = 536.0
+margin_bottom = 119.0
 custom_fonts/font = SubResource( 1 )
-text = "0
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 825.0
+margin_top = 680.0
+margin_right = 1002.0
+margin_bottom = 785.0
+theme = ExtResource( 29 )
+custom_fonts/font = SubResource( 1 )
+text = "made by:
+GINGS GAMES
 "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -382,10 +395,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="credits_button" type="Node2D" parent="."]
+script = ExtResource( 30 )
+
+[node name="Button" type="Button" parent="credits_button"]
+margin_left = 38.0
+margin_top = 692.0
+margin_right = 182.0
+margin_bottom = 744.0
+theme = ExtResource( 29 )
+text = "CREDITS"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="pressed" from="menu/start/Button2" to="menu/start" method="_on_Button2_pressed"]
 [connection signal="pressed" from="menu/start/Button" to="menu/start" method="_on_Button_pressed"]
 [connection signal="pressed" from="volume/Button3" to="volume" method="_on_Button3_pressed"]
 [connection signal="value_changed" from="volume/pause_menu/CenterContainer/VBoxContainer/HSlider" to="volume" method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="volume/pause_menu/Button" to="volume" method="_on_Button_pressed"]
+[connection signal="pressed" from="credits_button/Button" to="credits_button" method="_on_Button_pressed"]
 
 [editable path="StaticBody2D"]

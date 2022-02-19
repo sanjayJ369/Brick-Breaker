@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
-[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
 [ext_resource path="res://scenes/menu/audio.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
@@ -658,6 +657,7 @@ texture = ExtResource( 11 )
 [node name="aim" type="Node2D" parent="."]
 
 [node name="tilemaps" type="Node2D" parent="."]
+visible = false
 
 [node name="square" type="TileMap" parent="tilemaps"]
 mode = 2
@@ -711,45 +711,6 @@ cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 1048584, 8, 0, 1048631, 6, 0, 1114120, 8, 0, 1114167, 6, 0, 1179656, 8, 0, 1179703, 6, 0, 1245192, 8, 0, 1245239, 6, 0, 1310728, 8, 0, 1310775, 6, 0, 1376264, 8, 0, 1376311, 6, 0, 1572886, 0, 0, 1572887, 2, 0, 1572888, 1, 0, 1572901, 0, 0, 1572902, 2, 0, 1572903, 1, 0, 1638422, 6, 0, 1638423, 7, 0, 1638424, 8, 0, 1638437, 6, 0, 1638438, 7, 0, 1638439, 8, 0, 1703958, 6, 0, 1703959, 7, 0, 1703960, 8, 0, 1703973, 6, 0, 1703974, 7, 0, 1703975, 8, 0, 1769494, 6, 0, 1769495, 7, 0, 1769496, 8, 0, 1769509, 6, 0, 1769510, 7, 0, 1769511, 8, 0, 1835030, 6, 0, 1835031, 7, 0, 1835032, 8, 0, 1835045, 6, 0, 1835046, 7, 0, 1835047, 8, 0, 1900566, 6, 0, 1900567, 7, 0, 1900568, 8, 0, 1900581, 6, 0, 1900582, 7, 0, 1900583, 8, 0, 1966102, 6, 0, 1966103, 7, 0, 1966104, 8, 0, 1966117, 6, 0, 1966118, 7, 0, 1966119, 8, 0, 2031638, 6, 0, 2031639, 7, 0, 2031640, 8, 0, 2031653, 6, 0, 2031654, 7, 0, 2031655, 8, 0, 2097174, 6, 0, 2097175, 7, 0, 2097176, 8, 0, 2097189, 6, 0, 2097190, 7, 0, 2097191, 8, 0, 2162710, 6, 0, 2162711, 7, 0, 2162712, 8, 0, 2162725, 6, 0, 2162726, 7, 0, 2162727, 8, 0, 2228246, 6, 0, 2228247, 7, 0, 2228248, 8, 0, 2228261, 6, 0, 2228262, 7, 0, 2228263, 8, 0, 2293782, 6, 0, 2293783, 7, 0, 2293784, 8, 0, 2293797, 6, 0, 2293798, 7, 0, 2293799, 8, 0, 2359318, 6, 0, 2359319, 7, 0, 2359320, 8, 0, 2359333, 6, 0, 2359334, 7, 0, 2359335, 8, 0, 2424854, 6, 0, 2424855, 7, 0, 2424856, 8, 0, 2424869, 6, 0, 2424870, 7, 0, 2424871, 8, 0, 2490390, 6, 0, 2490391, 7, 0, 2490392, 8, 0, 2490405, 6, 0, 2490406, 7, 0, 2490407, 8, 0, 2555926, 6, 0, 2555927, 7, 0, 2555928, 8, 0, 2555941, 6, 0, 2555942, 7, 0, 2555943, 8, 0, 2621462, 3, 0, 2621463, 5, 0, 2621464, 4, 0, 2621477, 3, 0, 2621478, 5, 0, 2621479, 4, 0 )
-
-[node name="tile_spawner" type="Node2D" parent="."]
-
-[node name="squares" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/square")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/squares")
-
-[node name="triangles" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/triangles")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/triangles")
-
-[node name="H_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/H_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/H_rec")
-
-[node name="V_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/V_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/V_rec")
-
-[node name="bomb" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/bomb")
-mapping = "res://json addons/bomb_tile.json"
-target_node = NodePath("../../bricks/bomb")
-
-[node name="sand" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/sand")
-mapping = "res://json addons/sand_tile_spawnner.json"
-spawn_at_runtime = true
-target_node = NodePath("../../bricks/sand")
 
 [node name="golden_bomb" parent="." instance=ExtResource( 26 )]
 position = Vector2( 496, 147 )

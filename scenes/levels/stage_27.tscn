@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -7,13 +7,20 @@
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
-[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
+[ext_resource path="res://scenes/bricks/sand bricks/sand.gd" type="Script" id=8]
+[ext_resource path="res://scenes/bricks/sand bricks/ml.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/bricks/squares/gold/gold1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/bricks/squares/wood/wood1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/bricks/bombs/golden_bomb.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/bricks/sand bricks/mr.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/bricks/sand bricks/bc.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/bricks/sand bricks/br.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/bricks/sand bricks/bl.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/menu/audio.tscn" type="PackedScene" id=21]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -242,6 +249,258 @@ position = Vector2( 592, 592 )
 
 [node name="sand" type="Node2D" parent="bricks"]
 
+[node name="b_c" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 360, 72 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c2" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 376, 72 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c3" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 488, 72 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c4" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 504, 72 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c5" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 616, 72 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c6" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 632, 72 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 408, 136 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 456, 136 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left2" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 536, 136 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right2" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 584, 136 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left3" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 408, 152 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right3" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 456, 152 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left4" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 536, 152 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right4" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 584, 152 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right5" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 296, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="bl" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 19 )]
+position = Vector2( 408, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c7" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 424, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c8" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 440, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="br" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 18 )]
+position = Vector2( 456, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="bl2" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 19 )]
+position = Vector2( 536, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c9" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 552, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="b_c10" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 568, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="br2" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 18 )]
+position = Vector2( 584, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left5" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 696, 168 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right6" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 296, 184 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left6" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 696, 184 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right7" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 296, 200 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left7" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 696, 200 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right8" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 296, 216 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left8" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 696, 216 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right9" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 296, 232 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left9" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 696, 232 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right10" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 296, 248 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left10" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 696, 248 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right11" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 232, 424 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left11" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 760, 424 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right12" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 232, 440 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left12" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 760, 440 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right13" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 232, 456 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left13" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 760, 456 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_right14" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 232, 472 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="middle_left14" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 9 )]
+position = Vector2( 760, 472 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 494, 713 )
 rotation = 1.5708
@@ -257,6 +516,7 @@ texture = ExtResource( 11 )
 [node name="aim" type="Node2D" parent="."]
 
 [node name="tilemaps" type="Node2D" parent="."]
+visible = false
 
 [node name="square" type="TileMap" parent="tilemaps"]
 mode = 2
@@ -310,47 +570,12 @@ cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 262166, 5, 0, 262167, 5, 0, 262174, 5, 0, 262175, 5, 0, 262182, 5, 0, 262183, 5, 0, 524313, 6, 0, 524316, 8, 0, 524321, 6, 0, 524324, 8, 0, 589849, 6, 0, 589852, 8, 0, 589857, 6, 0, 589860, 8, 0, 655378, 8, 0, 655385, 3, 0, 655386, 5, 0, 655387, 5, 0, 655388, 4, 0, 655393, 3, 0, 655394, 5, 0, 655395, 5, 0, 655396, 4, 0, 655403, 6, 0, 720914, 8, 0, 720939, 6, 0, 786450, 8, 0, 786475, 6, 0, 851986, 8, 0, 852011, 6, 0, 917522, 8, 0, 917547, 6, 0, 983058, 8, 0, 983083, 6, 0, 1703950, 8, 0, 1703983, 6, 0, 1769486, 8, 0, 1769519, 6, 0, 1835022, 8, 0, 1835055, 6, 0, 1900558, 8, 0, 1900591, 6, 0 )
 
-[node name="tile_spawner" type="Node2D" parent="."]
-
-[node name="squares" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/square")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/squares")
-
-[node name="triangles" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/triangles")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/triangles")
-
-[node name="H_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/H_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/H_rec")
-
-[node name="V_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/V_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/V_rec")
-
-[node name="bomb" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/bomb")
-mapping = "res://json addons/bomb_tile.json"
-target_node = NodePath("../../bricks/bomb")
-
-[node name="sand" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/sand")
-mapping = "res://json addons/sand_tile_spawnner.json"
-spawn_at_runtime = true
-target_node = NodePath("../../bricks/sand")
-
 [node name="golden_bomb" parent="." instance=ExtResource( 15 )]
 position = Vector2( 498, 223 )
 brick_life = 30
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 21 )]
+
+[node name="GUI" parent="." instance=ExtResource( 20 )]
 
 [editable path="StaticBody2D"]

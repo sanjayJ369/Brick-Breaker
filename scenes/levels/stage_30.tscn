@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
-[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
+[ext_resource path="res://scenes/bricks/sand bricks/sand.gd" type="Script" id=8]
 [ext_resource path="res://scenes/bricks/bombs/golden_bomb.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
@@ -15,6 +15,10 @@
 [ext_resource path="res://scenes/bricks/squares/rocks/rock1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/menu/audio.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/bricks/sand bricks/tl.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/bricks/sand bricks/tr.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/bricks/sand bricks/bl.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/bricks/sand bricks/br.tscn" type="PackedScene" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -540,6 +544,30 @@ position = Vector2( 880, 656 )
 
 [node name="sand" type="Node2D" parent="bricks"]
 
+[node name="tl" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 16 )]
+position = Vector2( 488, 344 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="tr" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 17 )]
+position = Vector2( 504, 344 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="bl" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 18 )]
+position = Vector2( 488, 360 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
+[node name="br" type="StaticBody2D" parent="bricks/sand" groups=["brick", "sand"] instance=ExtResource( 19 )]
+position = Vector2( 504, 360 )
+collision_layer = 2
+script = ExtResource( 8 )
+infinite_balls = true
+
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 494, 713 )
 rotation = 1.5708
@@ -555,6 +583,7 @@ texture = ExtResource( 11 )
 [node name="aim" type="Node2D" parent="."]
 
 [node name="tilemaps" type="Node2D" parent="."]
+visible = false
 
 [node name="square" type="TileMap" parent="tilemaps"]
 mode = 2
@@ -607,45 +636,6 @@ cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 1376286, 0, 0, 1376287, 1, 0, 1441822, 3, 0, 1441823, 4, 0 )
-
-[node name="tile_spawner" type="Node2D" parent="."]
-
-[node name="squares" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/square")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/squares")
-
-[node name="triangles" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/triangles")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/triangles")
-
-[node name="H_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/H_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/H_rec")
-
-[node name="V_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/V_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/V_rec")
-
-[node name="bomb" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/bomb")
-mapping = "res://json addons/bomb_tile.json"
-target_node = NodePath("../../bricks/bomb")
-
-[node name="sand" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/sand")
-mapping = "res://json addons/sand_tile_spawnner.json"
-spawn_at_runtime = true
-target_node = NodePath("../../bricks/sand")
 
 [node name="golden_bomb" parent="." instance=ExtResource( 9 )]
 position = Vector2( 499, 271 )

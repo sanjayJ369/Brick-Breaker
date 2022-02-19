@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=4]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=5]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=6]
-[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=7]
 [ext_resource path="res://scenes/wall.gd" type="Script" id=8]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=10]
@@ -23,7 +22,7 @@ balls = 100
 delay = 0.1
 vel_max = 500
 ball_life = 5
-max_bounces = 45
+max_bounces = 15
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 9 )]
 
@@ -146,6 +145,7 @@ texture = ExtResource( 5 )
 [node name="aim" type="Node2D" parent="."]
 
 [node name="tilemaps" type="Node2D" parent="."]
+visible = false
 
 [node name="square" type="TileMap" parent="tilemaps"]
 mode = 2
@@ -183,32 +183,6 @@ cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 48, 0, 0, 48, 0, 0 )
 compatibility_mode = true
 format = 1
-
-[node name="tile_spawner" type="Node2D" parent="."]
-
-[node name="squares" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 7 )
-source_tilemap = NodePath("../../tilemaps/square")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/squares")
-
-[node name="triangles" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 7 )
-source_tilemap = NodePath("../../tilemaps/triangles")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/triangles")
-
-[node name="H_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 7 )
-source_tilemap = NodePath("../../tilemaps/H_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/H_rec")
-
-[node name="V_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 7 )
-source_tilemap = NodePath("../../tilemaps/V_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/V_rec")
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 3 )]
 

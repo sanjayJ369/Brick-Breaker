@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Restart_pressed.png-9a8cb7e451886f5da3ceb13f07e02c0d.stex"
+path="res://.import/ginga_large.png-ca8162e6c92d4098e62ce9303d4eaf0e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui_elements/Menu/Buttons/Restart_pressed.png"
-dest_files=[ "res://.import/Restart_pressed.png-9a8cb7e451886f5da3ceb13f07e02c0d.stex" ]
+source_file="res://ui_elements/ginga_large.png"
+dest_files=[ "res://.import/ginga_large.png-ca8162e6c92d4098e62ce9303d4eaf0e.stex" ]
 
 [params]
 
