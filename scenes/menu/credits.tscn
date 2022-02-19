@@ -43,6 +43,7 @@ Button/styles/pressed = SubResource( 6 )
 
 [node name="control" type="Node2D"]
 script = ExtResource( 1 )
+vel_max = 500
 max_bounces = 10
 menu = true
 credits = true

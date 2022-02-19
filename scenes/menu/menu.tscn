@@ -17,7 +17,7 @@
 [ext_resource path="res://ui_elements/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" type="Texture" id=15]
 [ext_resource path="res://scenes/menu/menu.gd" type="Script" id=16]
 [ext_resource path="res://scenes/menu/progress_bar/progress_bar.tres" type="Theme" id=17]
-[ext_resource path="res://ui_elements/Menu/Buttons/Close.png" type="Texture" id=18]
+[ext_resource path="res://ui_elements/Menu/Buttons/close.png" type="Texture" id=18]
 [ext_resource path="res://ui_elements/Menu/Buttons/Settings_pressed.png" type="Texture" id=19]
 [ext_resource path="res://ui_elements/Menu/Buttons/Play_pressed.png" type="Texture" id=20]
 [ext_resource path="res://ui_elements/Menu/Buttons/close_pressed.png" type="Texture" id=21]
@@ -135,6 +135,7 @@ Button/styles/pressed = SubResource( 20 )
 [node name="control" type="Node2D"]
 script = ExtResource( 1 )
 balls = -1
+vel_max = 500
 max_bounces = 10
 menu = true
 
@@ -174,7 +175,7 @@ margin_bottom = 785.0
 theme = ExtResource( 29 )
 custom_fonts/font = SubResource( 1 )
 text = "made by:
-GINGS GAMES
+GINGA GAMES
 "
 __meta__ = {
 "_edit_use_anchors_": false
