@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/menu/credits.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
-[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
 [ext_resource path="res://ui_elements/Menu/Buttons/Previous_pressed.png" type="Texture" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
@@ -159,45 +158,6 @@ tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
-
-[node name="tile_spawner" type="Node2D" parent="."]
-
-[node name="squares" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/square")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/squares")
-
-[node name="triangles" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/triangles")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/triangles")
-
-[node name="H_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/H_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/H_rec")
-
-[node name="V_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/V_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/V_rec")
-
-[node name="bomb" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/bomb")
-mapping = "res://json addons/bomb_tile.json"
-target_node = NodePath("../../bricks/bomb")
-
-[node name="sand" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/sand")
-mapping = "res://json addons/sand_tile_spawnner.json"
-spawn_at_runtime = true
-target_node = NodePath("../../bricks/sand")
 
 [node name="Control" type="Control" parent="."]
 margin_right = 40.0
