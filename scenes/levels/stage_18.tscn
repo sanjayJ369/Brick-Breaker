@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
 [ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
-[ext_resource path="res://scenes/bricks/bricks.gd" type="Script" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
@@ -27,7 +26,7 @@ balls = 50
 delay = 0.1
 vel_max = 500
 ball_life = 30
-max_bounces = 45
+max_bounces = 10
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
@@ -190,17 +189,14 @@ brick_life = 60
 position = Vector2( 272, 272 )
 brick_life = 60
 
-[node name="wood1" parent="bricks/squares" groups=["brick"] instance=ExtResource( 15 )]
+[node name="wood1" parent="bricks/squares" instance=ExtResource( 15 )]
 position = Vector2( 464, 272 )
-script = ExtResource( 9 )
 
-[node name="wood2" parent="bricks/squares" groups=["brick"] instance=ExtResource( 15 )]
+[node name="wood2" parent="bricks/squares" instance=ExtResource( 15 )]
 position = Vector2( 496, 272 )
-script = ExtResource( 9 )
 
-[node name="wood3" parent="bricks/squares" groups=["brick"] instance=ExtResource( 15 )]
+[node name="wood3" parent="bricks/squares" instance=ExtResource( 15 )]
 position = Vector2( 528, 272 )
-script = ExtResource( 9 )
 
 [node name="rock32" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 720, 272 )
@@ -214,13 +210,11 @@ brick_life = 60
 position = Vector2( 304, 304 )
 brick_life = 60
 
-[node name="gold1" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+[node name="gold1" parent="bricks/squares" instance=ExtResource( 14 )]
 position = Vector2( 432, 304 )
-script = ExtResource( 9 )
 
-[node name="gold2" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+[node name="gold2" parent="bricks/squares" instance=ExtResource( 14 )]
 position = Vector2( 560, 304 )
-script = ExtResource( 9 )
 
 [node name="rock35" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 304 )
@@ -238,13 +232,11 @@ brick_life = 60
 position = Vector2( 304, 336 )
 brick_life = 60
 
-[node name="gold3" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+[node name="gold3" parent="bricks/squares" instance=ExtResource( 14 )]
 position = Vector2( 432, 336 )
-script = ExtResource( 9 )
 
-[node name="gold4" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+[node name="gold4" parent="bricks/squares" instance=ExtResource( 14 )]
 position = Vector2( 560, 336 )
-script = ExtResource( 9 )
 
 [node name="rock39" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 336 )
@@ -262,13 +254,11 @@ brick_life = 60
 position = Vector2( 304, 368 )
 brick_life = 60
 
-[node name="gold5" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+[node name="gold5" parent="bricks/squares" instance=ExtResource( 14 )]
 position = Vector2( 464, 368 )
-script = ExtResource( 9 )
 
-[node name="gold6" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+[node name="gold6" parent="bricks/squares" instance=ExtResource( 14 )]
 position = Vector2( 528, 368 )
-script = ExtResource( 9 )
 
 [node name="rock43" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 688, 368 )
@@ -286,9 +276,8 @@ brick_life = 60
 position = Vector2( 336, 400 )
 brick_life = 60
 
-[node name="gold7" parent="bricks/squares" groups=["brick"] instance=ExtResource( 14 )]
+[node name="gold7" parent="bricks/squares" instance=ExtResource( 14 )]
 position = Vector2( 496, 400 )
-script = ExtResource( 9 )
 
 [node name="rock47" parent="bricks/squares" instance=ExtResource( 13 )]
 position = Vector2( 656, 400 )
