@@ -78,7 +78,7 @@ func _ready():
 
 func _process(delta):
 	
-	print(Global.current_level)
+	# print(Global.current_level)
 	
 	var ball_in_scene = get_node("ball").get_child_count()
 	

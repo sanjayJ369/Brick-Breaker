@@ -258,9 +258,6 @@ focus_neighbour_bottom = NodePath("../Button")
 focus_next = NodePath("../Button")
 focus_previous = NodePath("../Button")
 theme = SubResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button" type="Button" parent="menu/start"]
 margin_left = 19.6667
