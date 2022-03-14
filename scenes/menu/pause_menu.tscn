@@ -13,9 +13,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="backgound" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -48,14 +45,11 @@ texture = ExtResource( 2 )
 tile_set = ExtResource( 5 )
 cell_size = Vector2( 10, 10 )
 format = 1
-tile_data = PoolIntArray( 851988, 0, 15, 851990, 0, 0, 851992, 0, 20, 851994, 0, 18, 851996, 0, 4, 851998, 0, 3, 1179670, 0, 17, 1179671, 0, 4, 1179672, 0, 0, 1179673, 0, 18, 1179674, 0, 20, 1179675, 0, 12, 1179676, 0, 4, 1376278, 0, 16, 1376280, 0, 20, 1376282, 0, 8, 1376284, 0, 19, 1572886, 0, 17, 1572887, 0, 4, 1572888, 0, 18, 1572889, 0, 19, 1572890, 0, 0, 1572891, 0, 17, 1572892, 0, 19 )
+tile_data = PoolIntArray( 851988, 0, 15, 851990, 0, 0, 851992, 0, 20, 851994, 0, 18, 851996, 0, 4, 851998, 0, 3, 1179670, 0, 17, 1179671, 0, 4, 1179672, 0, 18, 1179673, 0, 20, 1179674, 0, 12, 1179675, 0, 4, 1376278, 0, 16, 1376280, 0, 20, 1376282, 0, 8, 1376284, 0, 19, 1572886, 0, 17, 1572887, 0, 4, 1572888, 0, 18, 1572889, 0, 19, 1572890, 0, 0, 1572891, 0, 17, 1572892, 0, 19 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 440.0
