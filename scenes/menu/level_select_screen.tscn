@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -6,8 +6,8 @@
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://scenes/menu/ui.gd" type="Script" id=6]
-[ext_resource path="res://ui_elements/Menu/Buttons/Previous_pressed.png" type="Texture" id=7]
-[ext_resource path="res://ui_elements/Menu/Buttons/Previous.png" type="Texture" id=8]
+[ext_resource path="res://scenes/menu/back_button_theme.tres" type="Theme" id=7]
+[ext_resource path="res://sounds/selected sounds for brick breaker game/menu.mp3" type="AudioStream" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
@@ -16,36 +16,15 @@
 size = 32
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxTexture" id=2]
-texture = ExtResource( 7 )
-region_rect = Rect2( 0, 0, 21, 22 )
-
-[sub_resource type="StyleBoxTexture" id=3]
-texture = ExtResource( 7 )
-region_rect = Rect2( 0, 0, 21, 22 )
-
-[sub_resource type="StyleBoxTexture" id=4]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 21, 22 )
-
-[sub_resource type="StyleBoxTexture" id=5]
-
-[sub_resource type="Theme" id=6]
-Button/styles/focus = SubResource( 2 )
-Button/styles/hover = SubResource( 3 )
-Button/styles/normal = SubResource( 4 )
-Button/styles/pressed = SubResource( 5 )
-
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 6, 6 )
 
 [node name="control" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 1 )
-balls = -1
-delay = 0.1
 vel_max = 500
-ball_life = 6
-max_bounces = 9
+max_bounces = 30
+menu = true
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
@@ -109,7 +88,7 @@ margin_top = 24.0
 margin_right = 38.0
 margin_bottom = 38.0
 rect_scale = Vector2( 4, 4 )
-theme = SubResource( 6 )
+theme = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -134,6 +113,11 @@ columns = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -24.0
+autoplay = true
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
 

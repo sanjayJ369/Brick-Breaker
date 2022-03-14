@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/menu.mp3-cbcdbfb9cfa0db4b7ef6c6ce86a823fd.mp3str"
+
+[deps]
+
+source_file="res://sounds/selected sounds for brick breaker game/menu.mp3"
+dest_files=[ "res://.import/menu.mp3-cbcdbfb9cfa0db4b7ef6c6ce86a823fd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

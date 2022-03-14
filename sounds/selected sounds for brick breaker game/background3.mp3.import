@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/background3.mp3-263943bc46d589e399bcdd48b3654fc2.mp3str"
+
+[deps]
+
+source_file="res://sounds/selected sounds for brick breaker game/background3.mp3"
+dest_files=[ "res://.import/background3.mp3-263943bc46d589e399bcdd48b3654fc2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

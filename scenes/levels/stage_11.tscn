@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
 [ext_resource path="res://tiles/bomb3.tres" type="TileSet" id=7]
-[ext_resource path="res://addons/tile_spawner/tile_spawner.gd" type="Script" id=8]
 [ext_resource path="res://scenes/bricks/squares/wood/wood1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
@@ -19,12 +18,18 @@
 [ext_resource path="res://scenes/bricks/sand bricks/mc.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/bricks/sand bricks/tr.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/bricks/sand bricks/tl.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/scenechanger.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/menu/audio.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/bricks/sand bricks/bl.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/bricks/sand bricks/br.tscn" type="PackedScene" id=24]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
 font_data = ExtResource( 4 )
 
 [node name="stage25" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 1 )
 balls = 35
 delay = 0.1
@@ -43,10 +48,10 @@ texture = ExtResource( 5 )
 [node name="ball" type="Node2D" parent="."]
 
 [node name="Label" type="Label" parent="."]
-margin_left = 24.0
-margin_top = 720.0
-margin_right = 104.0
-margin_bottom = 789.0
+margin_left = 64.0
+margin_top = 696.0
+margin_right = 144.0
+margin_bottom = 765.0
 custom_fonts/font = SubResource( 1 )
 text = "0
 "
@@ -491,6 +496,30 @@ position = Vector2( 392, 744 )
 [node name="t_c24" parent="bricks/sand" instance=ExtResource( 15 )]
 position = Vector2( 408, 744 )
 
+[node name="bl" parent="bricks/sand/t_c24" instance=ExtResource( 23 )]
+position = Vector2( 80, -384 )
+
+[node name="br" parent="bricks/sand/t_c24" instance=ExtResource( 24 )]
+position = Vector2( 96, -384 )
+
+[node name="tl" parent="bricks/sand/t_c24" instance=ExtResource( 19 )]
+position = Vector2( 80, -400 )
+
+[node name="tr" parent="bricks/sand/t_c24" instance=ExtResource( 18 )]
+position = Vector2( 96, -400 )
+
+[node name="bl2" parent="bricks/sand/t_c24" instance=ExtResource( 23 )]
+position = Vector2( 80, -192 )
+
+[node name="br2" parent="bricks/sand/t_c24" instance=ExtResource( 24 )]
+position = Vector2( 96, -192 )
+
+[node name="tl2" parent="bricks/sand/t_c24" instance=ExtResource( 19 )]
+position = Vector2( 80, -208 )
+
+[node name="tr2" parent="bricks/sand/t_c24" instance=ExtResource( 18 )]
+position = Vector2( 96, -208 )
+
 [node name="t_c25" parent="bricks/sand" instance=ExtResource( 15 )]
 position = Vector2( 424, 744 )
 
@@ -670,47 +699,14 @@ cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 format = 1
 tile_data = PoolIntArray( 65537, 1, 0, 65598, 0, 0, 131073, 8, 0, 131134, 6, 0, 196609, 8, 0, 196670, 6, 0, 262145, 8, 0, 262206, 6, 0, 327681, 8, 0, 327742, 6, 0, 393217, 8, 0, 393278, 6, 0, 458753, 8, 0, 458814, 6, 0, 524289, 8, 0, 524350, 6, 0, 589825, 8, 0, 589886, 6, 0, 655361, 8, 0, 655422, 6, 0, 720897, 8, 0, 720958, 6, 0, 786433, 8, 0, 786494, 6, 0, 851969, 8, 0, 852030, 6, 0, 917505, 8, 0, 917566, 6, 0, 983041, 8, 0, 983102, 6, 0, 1048577, 8, 0, 1048638, 6, 0, 1114113, 8, 0, 1114174, 6, 0, 1179649, 8, 0, 1179710, 6, 0, 1245185, 8, 0, 1245246, 6, 0, 1310721, 8, 0, 1310782, 6, 0, 1376257, 8, 0, 1376286, 0, 0, 1376287, 1, 0, 1376318, 6, 0, 1441793, 8, 0, 1441822, 3, 0, 1441823, 4, 0, 1441854, 6, 0, 1507329, 8, 0, 1507390, 6, 0, 1572865, 8, 0, 1572926, 6, 0, 1638401, 8, 0, 1638462, 6, 0, 1703937, 8, 0, 1703998, 6, 0, 1769473, 8, 0, 1769534, 6, 0, 1835009, 8, 0, 1835070, 6, 0, 1900545, 8, 0, 1900606, 6, 0, 1966081, 8, 0, 1966142, 6, 0, 2031617, 8, 0, 2031678, 6, 0, 2097153, 8, 0, 2097214, 6, 0, 2162689, 8, 0, 2162718, 0, 0, 2162719, 1, 0, 2162750, 6, 0, 2228225, 8, 0, 2228254, 3, 0, 2228255, 4, 0, 2228286, 6, 0, 2293761, 8, 0, 2293822, 6, 0, 2359297, 8, 0, 2359358, 6, 0, 2424833, 8, 0, 2424894, 6, 0, 2490369, 8, 0, 2490430, 6, 0, 2555905, 8, 0, 2555966, 6, 0, 2621441, 8, 0, 2621502, 6, 0, 2686977, 8, 0, 2687038, 6, 0, 2752513, 8, 0, 2752574, 6, 0, 2818049, 8, 0, 2818110, 6, 0, 2883585, 8, 0, 2883646, 6, 0, 2949121, 8, 0, 2949182, 6, 0, 3014657, 7, 0, 3014658, 2, 0, 3014659, 2, 0, 3014660, 2, 0, 3014661, 2, 0, 3014662, 2, 0, 3014663, 2, 0, 3014664, 2, 0, 3014665, 2, 0, 3014666, 2, 0, 3014667, 2, 0, 3014668, 2, 0, 3014669, 2, 0, 3014670, 2, 0, 3014671, 2, 0, 3014672, 2, 0, 3014673, 2, 0, 3014674, 2, 0, 3014675, 2, 0, 3014676, 2, 0, 3014677, 2, 0, 3014678, 2, 0, 3014679, 2, 0, 3014680, 2, 0, 3014681, 2, 0, 3014682, 2, 0, 3014683, 2, 0, 3014684, 2, 0, 3014685, 2, 0, 3014686, 2, 0, 3014687, 2, 0, 3014688, 2, 0, 3014689, 2, 0, 3014690, 2, 0, 3014691, 2, 0, 3014692, 2, 0, 3014693, 2, 0, 3014694, 2, 0, 3014695, 2, 0, 3014696, 2, 0, 3014697, 2, 0, 3014698, 2, 0, 3014699, 2, 0, 3014700, 2, 0, 3014701, 2, 0, 3014702, 2, 0, 3014703, 2, 0, 3014704, 2, 0, 3014705, 2, 0, 3014706, 2, 0, 3014707, 2, 0, 3014708, 2, 0, 3014709, 2, 0, 3014710, 2, 0, 3014711, 2, 0, 3014712, 2, 0, 3014713, 2, 0, 3014714, 2, 0, 3014715, 2, 0, 3014716, 2, 0, 3014717, 2, 0, 3014718, 7, 0 )
 
-[node name="tile_spawner" type="Node2D" parent="."]
-
-[node name="squares" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/square")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/squares")
-
-[node name="triangles" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/triangles")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/triangles")
-
-[node name="H_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/H_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/H_rec")
-
-[node name="V_rec" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/V_rect")
-mapping = "res://json addons/objects2.json"
-target_node = NodePath("../../bricks/V_rec")
-
-[node name="bomb" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/bomb")
-mapping = "res://json addons/bomb_tile.json"
-target_node = NodePath("../../bricks/bomb")
-
-[node name="sand" type="Node2D" parent="tile_spawner"]
-script = ExtResource( 8 )
-source_tilemap = NodePath("../../tilemaps/sand")
-mapping = "res://json addons/sand_tile_spawnner.json"
-spawn_at_runtime = true
-target_node = NodePath("../../bricks/sand")
-
 [node name="golden_bomb" parent="." instance=ExtResource( 14 )]
 position = Vector2( 499, 225 )
 brick_life = 30
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 21 )]
+
+[node name="scenechanger" parent="." instance=ExtResource( 20 )]
+
+[node name="GUI" parent="." instance=ExtResource( 22 )]
 
 [editable path="StaticBody2D"]

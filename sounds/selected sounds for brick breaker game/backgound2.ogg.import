@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/backgound2.ogg-01091a748e95ea8b42ae96b15fb27adc.oggstr"
+
+[deps]
+
+source_file="res://sounds/selected sounds for brick breaker game/backgound2.ogg"
+dest_files=[ "res://.import/backgound2.ogg-01091a748e95ea8b42ae96b15fb27adc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
