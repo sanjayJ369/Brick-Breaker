@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -18,6 +18,10 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 6, 6 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 23
+font_data = ExtResource( 4 )
 
 [node name="control" type="Node2D"]
 pause_mode = 2
@@ -118,6 +122,21 @@ __meta__ = {
 stream = ExtResource( 9 )
 volume_db = -24.0
 autoplay = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 680.0
+margin_right = 128.0
+margin_bottom = 749.0
+custom_colors/font_color = Color( 1, 0.937255, 0.027451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Ball's life:
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
 

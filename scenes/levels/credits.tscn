@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scenes/wall.gd" type="Script" id=1]
 [ext_resource path="res://scenes/wall/wall.tscn" type="PackedScene" id=2]
@@ -6,29 +6,41 @@
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
-[ext_resource path="res://scenes/bricks/squares/wood/wood1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/scenechanger.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprites/ginga_large.png" type="Texture" id=7]
+[ext_resource path="res://scenes/scenechanger.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
 [ext_resource path="res://sprites/cannon/cannon_standt.png" type="Texture" id=11]
 [ext_resource path="res://scenes/aiming/aimer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/levels/back.gd" type="Script" id=13]
+[ext_resource path="res://scenes/menu/back_button_theme.tres" type="Theme" id=14]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 31
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 23
 font_data = ExtResource( 4 )
 
-[node name="stage4" type="Node2D"]
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 4 )
+
+[node name="credits" type="Node2D"]
 pause_mode = 2
 script = ExtResource( 1 )
-balls = 100
+balls = -1
 delay = 0.1
 vel_max = 500
-ball_life = 3
+ball_life = 120
 max_bounces = 10
+menu = true
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 512, 384 )
+scale = Vector2( 1.65333, 1.22667 )
+texture = ExtResource( 7 )
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
 
@@ -52,59 +64,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label2" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 680.0
+margin_right = 128.0
+margin_bottom = 749.0
+custom_colors/font_color = Color( 1, 0.937255, 0.027451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Ball's life:
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="aimer" parent="." instance=ExtResource( 12 )]
 position = Vector2( -64, 464 )
-
-[node name="bricks" type="Node2D" parent="."]
-
-[node name="H_rec" type="Node2D" parent="bricks"]
-position = Vector2( 0, 8 )
-
-[node name="V_rec" type="Node2D" parent="bricks"]
-position = Vector2( 0, 8 )
-
-[node name="triangles" type="Node2D" parent="bricks"]
-
-[node name="squares" type="Node2D" parent="bricks"]
-
-[node name="wood2" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 400, 336 )
-
-[node name="wood4" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 592, 336 )
-
-[node name="wood5" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 496, 368 )
-
-[node name="wood6" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 496, 400 )
-
-[node name="wood7" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 496, 432 )
-
-[node name="wood8" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 400, 464 )
-
-[node name="wood9" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 592, 464 )
-
-[node name="wood10" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 272, 560 )
-
-[node name="wood11" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 400, 560 )
-
-[node name="wood12" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 592, 560 )
-
-[node name="wood13" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 720, 560 )
-
-[node name="wood14" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 336, 720 )
-
-[node name="wood15" parent="bricks/squares" instance=ExtResource( 7 )]
-position = Vector2( 656, 720 )
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 494, 713 )
@@ -131,7 +107,7 @@ cell_quadrant_size = 32
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 compatibility_mode = true
 format = 1
-tile_data = PoolIntArray( 655372, 0, 0, 655378, 0, 0, 720911, 0, 0, 786447, 0, 0, 851983, 0, 0, 917516, 0, 0, 917522, 0, 0, 1114120, 0, 0, 1114124, 0, 0, 1114130, 0, 0, 1114134, 0, 0, 1441802, 0, 0, 1441812, 0, 0 )
+tile_data = PoolIntArray( 655370, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655380, 0, 0, 720906, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720916, 0, 0, 786442, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786452, 0, 0, 851978, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851988, 0, 0, 917514, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917524, 0, 0 )
 
 [node name="H_rect" type="TileMap" parent="tilemaps"]
 mode = 2
@@ -162,24 +138,43 @@ format = 1
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 3 )]
 
-[node name="scenechanger" parent="." instance=ExtResource( 9 )]
+[node name="scenechanger" parent="." instance=ExtResource( 8 )]
 
-[node name="GUI" parent="." instance=ExtResource( 8 )]
+[node name="GUI" parent="." instance=ExtResource( 9 )]
 
-[node name="Label2" type="Label" parent="."]
-pause_mode = 1
-margin_left = 24.0
-margin_top = 680.0
-margin_right = 128.0
-margin_bottom = 749.0
-custom_colors/font_color = Color( 1, 0.937255, 0.027451, 1 )
-custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Ball's life:
-"
+[node name="Label3" type="Label" parent="."]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 832.0
+margin_bottom = 576.0
+custom_colors/font_color = Color( 0.203922, 0.94902, 0.984314, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "DONE BY:
+Ginga games
+level disgh:Bush
+ui/ux:Realonsec
+programming:Matrix
+art:pixel frog(itch.io)"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="bricks" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="back" type="Button" parent="CanvasLayer"]
+margin_left = 40.0
+margin_top = 64.0
+margin_right = 128.0
+margin_bottom = 128.0
+theme = ExtResource( 14 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CanvasLayer/back" to="CanvasLayer/back" method="_on_back_pressed"]
 
 [editable path="StaticBody2D"]

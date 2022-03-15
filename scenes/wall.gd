@@ -45,6 +45,10 @@ var scene_change = null
 var retry = false
 
 func _ready():
+
+	get_tree().paused = false
+	
+	$Label2.text = "Ball's life = "+str(ball_life) +"sec"
 	
 	if has_node("golden_brick") == true:
 		golden_brick = get_node("golden_brick")
@@ -74,11 +78,13 @@ func _ready():
 	randomize()
 	#create_field()
 	create_background()
+	pause_mode = Node.PAUSE_MODE_STOP
 	pass # Replace with function body.
 
 func _process(delta):
 	
 	print(Global.current_level)
+	print(get_tree().is_paused())
 	
 	var ball_in_scene = get_node("ball").get_child_count()
 	
@@ -242,7 +248,11 @@ func play_transition():
 func switch_scene():
 	
 	Global.current_level = current_level + 1
-	get_tree().change_scene("res://scenes/levels/stage_"+str(current_level+1)+".tscn")
+	
+	if current_level+1 == 31:
+		get_tree().change_scene("res://scenes/levels/end_of_the_game.tscn")
+	else:
+		get_tree().change_scene("res://scenes/levels/stage_"+str(current_level+1)+".tscn")
 	
 	pass
 
@@ -251,3 +261,13 @@ func node_name():
 	return str(name.replace("@", "").replace(str(int(name)), ""))
 
 
+func _unhandled_input(event):
+	
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
+
+
+func _on_credits_pressed():
+	get_tree().change_scene("res://scenes/levels/credits.tscn")
+	#go to the credits scene 
+	pass # Replace with function body.
