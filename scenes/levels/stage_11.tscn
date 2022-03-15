@@ -650,6 +650,7 @@ texture = ExtResource( 11 )
 [node name="aim" type="Node2D" parent="."]
 
 [node name="tilemaps" type="Node2D" parent="."]
+visible = false
 
 [node name="square" type="TileMap" parent="tilemaps"]
 mode = 2
