@@ -72,13 +72,13 @@ margin_left = 64.0
 margin_top = 64.0
 margin_right = 168.0
 margin_bottom = 133.0
-custom_colors/font_color = Color( 0.427451, 0.996078, 0.12549, 1 )
+custom_colors/font_color = Color( 0.568627, 0.796078, 0.243137, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "1:move your mouse to aim
-2:Right click to know the path of the ball in adavnce
-3:RIGHT click to SHOOT the balls
+text = "1: move your mouse to aim
+2: Right click to know the path of the ball in adavnce
+3: RIGHT click to SHOOT the balls
 "
 __meta__ = {
 "_edit_use_anchors_": false
@@ -89,7 +89,7 @@ margin_left = 64.0
 margin_top = 160.0
 margin_right = 640.0
 margin_bottom = 265.0
-custom_colors/font_color = Color( 1, 0.223529, 0.623529, 1 )
+custom_colors/font_color = Color( 1, 0.403922, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )

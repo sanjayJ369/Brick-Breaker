@@ -83,21 +83,27 @@ func _ready():
 
 func _process(delta):
 	
-	print(Global.current_level)
-	print(get_tree().is_paused())
+	
+	
 	
 	var ball_in_scene = get_node("ball").get_child_count()
 	
 	if balls_left == 0 and ball_in_scene == 0:
+		
 		if has_node("GUI") and not retry:
-			print("changed the variable")
 			get_node("GUI").get_node("pause_menu").game_over = true
 			retry = true
 		
 	
 	if set_bricks_value() == 0 and menu == false:
 		
-		Global.levels_unlocked = Global.current_level + 1
+		if Global.current_level + 1 > Global.levels_unlocked:
+		
+			Global.levels_unlocked = Global.current_level 
+			Global.savedata(Global.levels_unlocked)
+		
+		Global.current_level = current_level + 1
+		print("working changed the scene\t",Global.current_level+1,"\t",Global.levels_unlocked)
 		play_transition()
 	
 	$Sprite.position = cannon_1()
@@ -247,9 +253,8 @@ func play_transition():
 	
 func switch_scene():
 	
-	Global.current_level = current_level + 1
-	
 	if current_level+1 == 31:
+		
 		get_tree().change_scene("res://scenes/levels/end_of_the_game.tscn")
 	else:
 		get_tree().change_scene("res://scenes/levels/stage_"+str(current_level+1)+".tscn")
@@ -271,3 +276,4 @@ func _on_credits_pressed():
 	get_tree().change_scene("res://scenes/levels/credits.tscn")
 	#go to the credits scene 
 	pass # Replace with function body.
+

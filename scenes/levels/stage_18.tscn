@@ -505,4 +505,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="nuclear" from="golden_bomb" to="." method="_on_golden_bomb_nuclear"]
+
 [editable path="StaticBody2D"]
