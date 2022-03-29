@@ -6,7 +6,7 @@
 [ext_resource path="res://fonts/EtBt11aBold-xxZ0.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/ball/Dust Particle.png" type="Texture" id=5]
 [ext_resource path="res://tiles/test2.tres" type="TileSet" id=6]
-[ext_resource path="res://sprites/ginga_large.png" type="Texture" id=7]
+[ext_resource path="res://sprites/ginga_background.png" type="Texture" id=7]
 [ext_resource path="res://scenes/scenechanger.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/menu/GUI.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/cannon/cannon_body.png" type="Texture" id=10]
@@ -38,8 +38,8 @@ max_bounces = 10
 menu = true
 
 [node name="Sprite4" type="Sprite" parent="."]
-position = Vector2( 512, 384 )
-scale = Vector2( 1.65333, 1.22667 )
+position = Vector2( 477.241, 387.369 )
+scale = Vector2( 1.87512, 1.39123 )
 texture = ExtResource( 7 )
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 2 )]
@@ -60,9 +60,6 @@ margin_bottom = 789.0
 custom_fonts/font = SubResource( 1 )
 text = "0
 "
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 24.0
@@ -75,9 +72,6 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Ball's life:
 "
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="aimer" parent="." instance=ExtResource( 12 )]
 position = Vector2( -64, 464 )
@@ -143,22 +137,27 @@ format = 1
 [node name="GUI" parent="." instance=ExtResource( 9 )]
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 200.0
-margin_top = 200.0
-margin_right = 832.0
-margin_bottom = 576.0
+margin_left = 39.0
+margin_top = 193.0
+margin_right = 983.0
+margin_bottom = 569.0
 custom_colors/font_color = Color( 0.203922, 0.94902, 0.984314, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "DONE BY:
-Ginga games
-level disgh:Bush
-ui/ux:Realonsec
-programming:Matrix
-art:pixel frog(itch.io)"
+text = "Game by                  and Matrix
+Art and Font by Pixel Frog
+Music and Sounds by Storyblocks"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 194.0
+margin_right = 945.0
+margin_bottom = 570.0
+custom_colors/font_color = Color( 0.862745, 0.368627, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Ginga Games
+"
+align = 1
 
 [node name="bricks" type="Node2D" parent="."]
 

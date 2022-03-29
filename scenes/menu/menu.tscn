@@ -417,11 +417,8 @@ custom_colors/font_color = Color( 1, 0.937255, 0.027451, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 22 )
-text = "Ball's life:
+text = "Ball Life:
 "
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="credits" type="Button" parent="."]
 margin_left = 857.0
