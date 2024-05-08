@@ -10,4 +10,4 @@ Programming: matrix (it’s me)
 
 UI / UX: onsec (https://github.com/milkyskies)
 
-Level Design: Bush Sage
+Level Design: Bush Sage (https://github.com/BushSage)
